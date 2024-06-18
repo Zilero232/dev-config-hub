@@ -1,0 +1,50 @@
+{
+  "name": "@zilero/jest",
+  "description": "jest config",
+  "license": "MIT",
+  "version": "1.1.1",
+  "keywords": [
+    "jest"
+  ],
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232"
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "jest.config.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"*.js\""
+  },
+  "lint-staged": {
+    "*.js": "prettier --write"
+  },
+  "peerDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  },
+  "peerDependenciesMeta": {
+    "ts-jest": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "devDependencies": {
+    "@siberiacancode/prettier": "*",
+    "ts-jest": "^29.1.4"
+  }
+}

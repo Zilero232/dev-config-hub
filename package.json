@@ -1,0 +1,44 @@
+{
+	"name": "dev-config-hub",
+	"license": "MIT",
+	"version": "1.0.0",
+	"keywords": [
+		"prettier",
+		"eslint",
+		"tsconfig",
+		"jest",
+		"stylelint"
+	],
+	"private": true,
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232"
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+	"workspaces": [
+		"dev-config/*"
+	],
+	"scripts": {
+		"dev": "turbo run dev",
+		"build": "turbo run build",
+		"deploy": "turbo run deploy",
+		"lint": "turbo run lint",
+		"format": "turbo run format",
+		"stylelint": "turbo run stylelint",
+		"unit-test": "turbo run unit-test",
+		"lint-staged": "lint-staged",
+		"change": "beachball change --no-commit",
+		"release": "beachball publish --yes",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@types/node": "^20.14.5",
+		"typescript": "^5.4.5"
+	}
+}

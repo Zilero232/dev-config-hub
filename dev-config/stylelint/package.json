@@ -1,0 +1,45 @@
+{
+  "name": "@zilero/stylelint",
+  "description": "stylelint config",
+  "license": "MIT",
+  "version": "1.1.1",
+  "keywords": [
+    "stylelint"
+  ],
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232"
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    ".stylelintrc.js"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write \"*.js\""
+  },
+  "lint-staged": {
+    "*.js": "prettier --write"
+  },
+  "peerDependencies": {
+    "stylelint": "^16.6.1"
+  },
+  "dependencies": {
+    "stylelint": "^16.6.1",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4"
+  },
+  "devDependencies": {
+    "@siberiacancode/prettier": "*"
+  }
+}
