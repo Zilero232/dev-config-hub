@@ -4,7 +4,6 @@
 
 ## 🔮 Инструменты
 
-- builder
 - eslint
 - jest
 - prettier
