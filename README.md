@@ -4,6 +4,7 @@
 
 ## 🔮 Инструменты
 
+- gulp
 - eslint
 - jest
 - prettier
