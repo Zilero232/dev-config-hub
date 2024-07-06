@@ -1,3 +1,6 @@
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
 # Visual Studio cache files
 # files ending in .cache can be ignored
 *.[Cc]ache
@@ -6,6 +9,7 @@
 
 # Node.js Tools for Visual Studio
 node_modules/
+package-lock.json
 
 # IDE - VSCode
 .vscode
@@ -18,3 +22,13 @@ dist
 logs
 *.log
 npm-debug.log*
+
+# Yarn
+yarn-error.log
+yarn.lock
+
+# Turbo
+.turbo
+
+# Thumbnails
+._*

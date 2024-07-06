@@ -1,4 +1,5 @@
 /** @type {import('stylelint').Config} */
+
 module.exports = {
   ignoreFiles: ['dist/**/*.css', 'coverage/**/*.css'],
   extends: ['stylelint-config-standard-scss', 'stylelint-config-idiomatic-order'],

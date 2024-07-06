@@ -1,0 +1,93 @@
+{
+  "compilerOptions": {
+    /* Basic Settings */
+    // Specifies the target JavaScript version.
+    "target": "esnext",
+    // Specifies standard libraries.
+    "lib": ["dom", "dom.iterable", "esnext"],
+    // Specifies the module system.
+    "module": "esnext",
+    // Allows JavaScript files to be compiled.
+    "allowJs": true,
+    // Checks JavaScript files for errors.
+    "checkJs": true,
+    // Specifies the directory for output files.
+    "outDir": "build",
+    // Removes comments from output files.
+    "removeComments": true,
+    // Generates .d.ts files.
+    "declaration": false,
+    // Preserves symbolic links when resolving modules.
+    "preserveSymlinks": true,
+    // Allows default imports from modules that don't export a default.
+    "allowSyntheticDefaultImports": true,
+    // Enables compatibility between CommonJS and ES modules.
+    "esModuleInterop": true,
+    // Enforces consistent casing in file names.
+    "forceConsistentCasingInFileNames": true,
+
+    /* Strict Type Checking */
+    // Enables all strict type-checking options.
+    "strict": true,
+    // Treats null and undefined as separate types.
+    "strictNullChecks": true,
+    // Checks types for bind, call, and apply methods.
+    "strictBindCallApply": true,
+    // Enables strict function type checking.
+    "strictFunctionTypes": true,
+    // Ensures all class properties are initialized in the constructor.
+    "strictPropertyInitialization": true,
+    // Disallows implicit any type.
+    "noImplicitAny": true,
+    // Disallows implicit this type.
+    "noImplicitThis": true,
+    // Enables strict mode for each file.
+    "alwaysStrict": true,
+
+    /* Code Generation */
+    // Embeds source maps into output files.
+    "inlineSourceMap": false,
+    // Embeds source files into source maps.
+    "inlineSources": false,
+    // Generates only .d.ts files.
+    "emitDeclarationOnly": false,
+    // Generates metadata for decorators.
+    "emitDecoratorMetadata": false,
+    // Transpiles iterators for older JavaScript versions.
+    "downlevelIteration": false,
+    // Generates source maps.
+    "sourceMap": false,
+    // Allows importing JSON files as modules.
+    "resolveJsonModule": true,
+    // Specifies the type of JSX expressions.
+    "jsx": "react",
+
+    /* Modules and Resolution */
+    // Specifies the module resolution strategy.
+    "moduleResolution": "node",
+    // Transpiles each file as a separate module.
+    "isolatedModules": false,
+    // Preserves symbolic links when resolving modules.
+    "preserveSymlinks": false,
+    // Ignores the "exports" field in package.json when resolving modules.
+    "resolvePackageJsonExports": false,
+
+    /* Linting and Formatting */
+    // Prevents the creation of output files.
+    "noEmit": true,
+    // Reports unused local variables.
+    "noUnusedLocals": true,
+    // Reports unused function parameters.
+    "noUnusedParameters": true,
+    // Reports fallthrough cases in switch statements.
+    "noFallthroughCasesInSwitch": true,
+
+    /* Project Settings */
+    // Enables project as part of the build.
+    "composite": false,
+    // Enables incremental compilation.
+    "incremental": true,
+    // Outputs diagnostic information.
+    "diagnostics": false
+  }
+}

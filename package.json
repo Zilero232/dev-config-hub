@@ -1,19 +1,21 @@
 {
-	"name": "dev-config-hub",
-	"license": "MIT",
-	"version": "1.0.0",
-	"keywords": [
-		"prettier",
-		"eslint",
-		"tsconfig",
-		"jest",
-		"stylelint"
-	],
-	"private": true,
+  "name": "dev-config-hub",
+  "version": "1.0.0",
+  "description": "This project provides a set of configurations and development tools, including settings for Prettier, ESLint, TypeScript and others.",
+  "license": "MIT",
+  "private": true,
   "author": {
     "name": "Artemev Alexandr",
     "url": "https://github.com/Zilero232"
   },
+  "keywords": [
+    "prettier",
+    "eslint",
+    "tsconfig",
+    "jest",
+    "stylelint",
+    "vitest"
+  ],
   "bugs": {
     "url": "https://github.com/Zilero232/dev-config-hub/issues"
   },
@@ -21,24 +23,33 @@
   "repository": {
     "url": "https://github.com/Zilero232/dev-config-hub"
   },
-	"workspaces": [
-		"dev-config/*"
-	],
-	"scripts": {
-		"dev": "turbo run dev",
-		"build": "turbo run build",
-		"deploy": "turbo run deploy",
-		"lint": "turbo run lint",
-		"format": "turbo run format",
-		"stylelint": "turbo run stylelint",
-		"unit-test": "turbo run unit-test",
-		"lint-staged": "lint-staged",
-		"change": "beachball change --no-commit",
-		"release": "beachball publish --yes",
-		"prepare": "husky install"
-	},
-	"devDependencies": {
-		"@types/node": "^20.14.5",
-		"typescript": "^5.4.5"
-	}
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "deploy": "turbo run deploy",
+    "lint": "turbo run lint",
+    "format": "turbo run format",
+    "stylelint": "turbo run stylelint",
+    "unit-test": "turbo run unit-test",
+    "lint-staged": "lint-staged",
+    "change": "beachball change --no-commit",
+    "release": "beachball publish --yes",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/format": "^19.3.0",
+    "conventional-changelog-atom": "^5.0.0",
+    "@types/node": "^20.14.10",
+    "beachball": "^2.43.1",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.7",
+    "prettier": "^3.3.2",
+    "turbo": "^2.0.6",
+    "typescript": "^5.5.3"
+  }
 }
