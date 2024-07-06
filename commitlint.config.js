@@ -1,24 +1,30 @@
 /** @type {import('@commitlint/types').UserConfig} */
 
+const commitTypes = {
+  'feat': ':sparkles:',
+  'fix': ':bug:',
+  'docs': ':pencil:',
+  'style': ':art:',
+  'refactor': ':recycle:',
+  'test': ':white_check_mark:',
+  'build': ':hammer:',
+  'perf': ':zap:',
+  'chore': ':wrench:'
+};
+
+const commitRegex = /^(\w+)(?=:)/; // Регулярное выражение для извлечения типа коммита
+
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-  parserPreset: ['conventional-changelog-atom'],
-  formatter: ['@commitlint/format'],
+  parserPreset: 'conventional-changelog-atom',
+  formatter: '@commitlint/format',
   rules: {
-    'type-enum': [
-      2,
-      'always',
-      [
-        'feat', // :sparkles: Adding a new feature
-        'fix', // :bug: Fixing a bug
-        'docs', // :pencil: Updating documentation
-        'style', // :art: Changes in styling
-        'refactor', // :recycle: Code refactoring without functional changes
-        'test', // :white_check_mark: Adding tests
-        'build', // :hammer: Changes in the build system or external dependencies
-        'perf', // :zap: Improving performance
-        'chore', // :wrench: Other changes that don't modify src or test files
-      ],
-    ],
-  },
+    'type-enum': [2, 'always', Object.keys(commitTypes)],
+    'format': (commit) => {
+      const [, type] = commit.match(commitRegex) || []; // Деструктуризация и извлечение типа коммита
+      const emoji = commitTypes[type];                  // Получение соответствующего смайлика
+
+      return emoji ? `${emoji} ${commit}` : commit;     // Форматирование сообщения с смайликом или без него
+    }
+  }
 };
