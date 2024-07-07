@@ -36,22 +36,21 @@ function writeCommitMessage(commitMsgFile, newCommitMsg) {
 // Function for processing the commit message
 function processCommitMessage(commitMsgFile) {
   const commitMsg = readCommitMessage(commitMsgFile);
-  const colonIndex = commitMsg.indexOf(':');
+  const match = commitMsg.match(/^(\w+)(?=:)\s*/);
 
-  if (colonIndex === -1) {
-    console.error('Colon not found in commit message.');
-    throw error;
-  }
+  if (match) {
+    const type = match[1];
+    const emoji = commitTypes[type];
 
-  const type = commitMsg.slice(0, colonIndex);
-  const emoji = commitTypes[type];
+    if (emoji) {
+      // Forming a new commit message with the addition of an emoji before the rest of the message
+      const newCommitMsg = `${type} ${emoji} ${commitMsg.replace(match[0], '').trim()}`;
 
-  if (emoji) {
-    const newCommitMsg = `${type} ${emoji} ${commitMsg}`;
-
-    console.log(type, newCommitMsg)
-
-    writeCommitMessage(commitMsgFile, newCommitMsg);
+      // Writing the new message back to the file
+      writeCommitMessage(commitMsgFile, newCommitMsg);
+    }
+  } else {
+    console.error('Commit type not found in commit message.');
   }
 }
 
