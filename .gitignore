@@ -27,8 +27,5 @@ npm-debug.log*
 yarn-error.log
 yarn.lock
 
-# Turbo
-.turbo
-
 # Thumbnails
 ._*

@@ -1,6 +1,6 @@
 {
   "name": "@zilero/prettier",
-  "description": "prettier configs",
+  "description": "prettier config",
   "license": "MIT",
   "version": "1.0.0",
   "keywords": [
@@ -31,9 +31,9 @@
     "*.js": "prettier --write"
   },
   "peerDependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.2"
   },
   "dependencies": {
-    "prettier": "^3.2.5"
+    "prettier": "^3.3.2"
   }
 }
