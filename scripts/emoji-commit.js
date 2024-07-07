@@ -1,7 +1,7 @@
 // scripts/emoji-commit.js
 const fs = require('fs');
 
-export const commitTypes = {
+const commitTypes = {
   'feat': ':sparkles:',           // Adding a new feature
   'fix': ':bug:',                 // Fixing a bug
   'docs': ':pencil:',             // Updating documentation
@@ -40,13 +40,16 @@ function processCommitMessage(commitMsgFile) {
 
   if (colonIndex === -1) {
     console.error('Colon not found in commit message.');
+    throw error;
   }
 
   const type = commitMsg.slice(0, colonIndex);
   const emoji = commitTypes[type];
 
   if (emoji) {
-    const newCommitMsg = `${emoji} ${commitMsg}`;
+    const newCommitMsg = `${type} ${emoji} ${commitMsg}`;
+
+    console.log(type, newCommitMsg)
 
     writeCommitMessage(commitMsgFile, newCommitMsg);
   }
