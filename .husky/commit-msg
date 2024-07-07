@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-node scripts/emoji-commit.js
-yarn commitlint --edit $1
+yarn commitlint --edit "$1"
+node scripts/emoji-commit.js "$1"
