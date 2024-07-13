@@ -1,3 +1,3 @@
-const { prettier } = require('@siberiacancode/prettier')
+const { prettier } = require('@zilero/prettier');
 
-module.exports = prettier
+module.exports = prettier;

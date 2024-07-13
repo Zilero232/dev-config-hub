@@ -1,10 +1,10 @@
 {
-	"name": "@zilero/stylelint",
-	"description": "stylelint config",
+	"name": "@zilero/gulp",
+	"description": "gulp config",
 	"license": "MIT",
 	"version": "1.0.0",
 	"keywords": [
-		"stylelint"
+		"gulp"
 	],
 	"author": {
 		"name": "Artemev Alexandr",
@@ -21,16 +21,14 @@
 		"access": "public"
 	},
 	"files": [
-		".stylelintrc.js"
+		"gulp.config.js"
 	],
 	"main": "index.js",
 	"peerDependencies": {
-		"stylelint": "^16.6.1"
+		"jest": "^29.7.0"
 	},
 	"dependencies": {
-		"stylelint": "^16.6.1",
-		"stylelint-config-idiomatic-order": "^10.0.0",
-		"stylelint-config-standard-scss": "^13.1.0",
-		"stylelint-order": "^6.0.4"
+		"jest": "^29.7.0",
+		"jest-environment-jsdom": "^29.7.0"
 	}
 }

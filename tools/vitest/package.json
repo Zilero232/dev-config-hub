@@ -1,46 +1,37 @@
 {
-  "name": "@zilero/vitest",
-  "description": "vitest config",
-  "license": "MIT",
-  "version": "1.2.3",
-  "keywords": [
-    "vitest"
-  ],
-  "author": {
-    "name": "Artemev Alexandr",
-    "url": "https://github.com/Zilero232"
-  },
-  "bugs": {
-    "url": "https://github.com/Zilero232/dev-config-hub/issues"
-  },
-  "homepage": "https://github.com/Zilero232/dev-config-hub",
-  "repository": {
-    "url": "https://github.com/Zilero232/dev-config-hub"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "vite.config.js",
-    "index.d.ts"
-  ],
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "format": "prettier --write \"*.js\""
-  },
-  "lint-staged": {
-    "*.js": "prettier --write"
-  },
-  "peerDependencies": {
-    "vitest": "^1.6.0",
-    "jsdom": "^24.1.0"
-  },
-  "dependencies": {
-    "vitest": "^1.6.0",
-    "jsdom": "^24.1.0"
-  },
-  "devDependencies": {
-    "@siberiacancode/prettier": "*"
-  }
+	"name": "@zilero/vitest",
+	"description": "vitest config",
+	"license": "MIT",
+	"version": "1.0.0",
+	"keywords": [
+		"vitest"
+	],
+	"author": {
+		"name": "Artemev Alexandr",
+		"url": "https://github.com/Zilero232"
+	},
+	"bugs": {
+		"url": "https://github.com/Zilero232/dev-config-hub/issues"
+	},
+	"homepage": "https://github.com/Zilero232/dev-config-hub",
+	"repository": {
+		"url": "https://github.com/Zilero232/dev-config-hub"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"vite.config.js",
+		"index.d.ts"
+	],
+	"main": "index.js",
+	"types": "index.d.ts",
+	"peerDependencies": {
+		"vitest": "^1.6.0",
+		"jsdom": "^24.1.0"
+	},
+	"dependencies": {
+		"vitest": "^1.6.0",
+		"jsdom": "^24.1.0"
+	}
 }

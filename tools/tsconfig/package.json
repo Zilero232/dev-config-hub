@@ -1,29 +1,29 @@
 {
-  "name": "@zilero/tsconfig",
-  "description": "typescript config",
-  "license": "MIT",
-  "version": "1.0.0",
-  "keywords": [
-    "stylelint"
-  ],
-  "author": {
-    "name": "Artemev Alexandr",
-    "url": "https://github.com/Zilero232"
-  },
-  "bugs": {
-    "url": "https://github.com/Zilero232/dev-config-hub/issues"
-  },
-  "homepage": "https://github.com/Zilero232/dev-config-hub",
-  "repository": {
-    "url": "https://github.com/Zilero232/dev-config-hub"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    "tsconfig.react.json"
-  ],
-  "peerDependencies": {
-    "typescript": "^4.9.5 || ^5.0.0"
-  }
+	"name": "@zilero/tsconfig",
+	"description": "typescript config",
+	"license": "MIT",
+	"version": "1.0.0",
+	"keywords": [
+		"stylelint"
+	],
+	"author": {
+		"name": "Artemev Alexandr",
+		"url": "https://github.com/Zilero232"
+	},
+	"bugs": {
+		"url": "https://github.com/Zilero232/dev-config-hub/issues"
+	},
+	"homepage": "https://github.com/Zilero232/dev-config-hub",
+	"repository": {
+		"url": "https://github.com/Zilero232/dev-config-hub"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"tsconfig.react.json"
+	],
+	"peerDependencies": {
+		"typescript": "^4.9.5 || ^5.0.0"
+	}
 }

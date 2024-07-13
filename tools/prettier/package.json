@@ -1,39 +1,33 @@
 {
-  "name": "@zilero/prettier",
-  "description": "prettier config",
-  "license": "MIT",
-  "version": "1.0.0",
-  "keywords": [
-    "prettier"
-  ],
-  "author": {
-    "name": "Artemev Alexandr",
-    "url": "https://github.com/Zilero232"
-  },
-  "bugs": {
-    "url": "https://github.com/Zilero232/dev-config-hub/issues"
-  },
-  "homepage": "https://github.com/Zilero232/dev-config-hub",
-  "repository": {
-    "url": "https://github.com/Zilero232/dev-config-hub"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "files": [
-    ".prettierrc.js"
-  ],
-  "main": "index.ts",
-  "scripts": {
-    "format": "prettier --write \"*.js\""
-  },
-  "lint-staged": {
-    "*.js": "prettier --write"
-  },
-  "peerDependencies": {
-    "prettier": "^3.3.2"
-  },
-  "dependencies": {
-    "prettier": "^3.3.2"
-  }
+	"name": "@zilero/prettier",
+	"description": "prettier config",
+	"license": "MIT",
+	"version": "1.0.0",
+	"keywords": [
+		"prettier"
+	],
+	"author": {
+		"name": "Artemev Alexandr",
+		"url": "https://github.com/Zilero232"
+	},
+	"bugs": {
+		"url": "https://github.com/Zilero232/dev-config-hub/issues"
+	},
+	"homepage": "https://github.com/Zilero232/dev-config-hub",
+	"repository": {
+		"url": "https://github.com/Zilero232/dev-config-hub"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		".prettierrc.js"
+	],
+	"main": "index.js",
+	"peerDependencies": {
+		"prettier": "^3.3.2"
+	},
+	"dependencies": {
+		"prettier": "^3.3.2"
+	}
 }

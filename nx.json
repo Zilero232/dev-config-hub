@@ -1,28 +1,49 @@
 {
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "nx-cloud",
-      "options": {
-        "cacheableOperations": ["build", "lint"],
-        "accessToken": "MzRhYjVhNWQtZmE1ZC00MWE2LTgwNjEtYTg3YTU1MzY2NmRlfHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "extends": "nx/presets/npm.json",
-  "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "affected": {
-    "defaultBase": "master"
-  },
-  "targetDefaults": {
-    "test": {
-      "inputs": ["default", "^default"]
-    },
-    "lint": {
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json",
-        "{workspaceRoot}/.eslintignore"
-      ]
-    }
-  }
+	"$schema": "./node_modules/nx/schemas/nx-schema.json",
+	"defaultBase": "main",
+	"workspaceLayout": {
+		"libsDir": "tools"
+	},
+	"namedInputs": {
+		"default": ["{projectRoot}/**/*", "sharedGlobals"],
+		"production": ["default"],
+		"sharedGlobals": []
+	},
+	"tasksRunnerOptions": {
+		"default": {
+			"runner": "nx-cloud",
+			"options": {
+				"cacheableOperations": ["lint", "format"],
+				"accessToken": "MTg4MDA5YmItYWM5MS00OTkzLWEwMGYtNjdlMjE1MDk0ZjZjfHJlYWQtd3JpdGU=",
+				"parallel": 2
+			}
+		}
+	},
+	"release": {
+		"projects": ["packages/*", "packages/nx/native-packages/*", "packages-legacy/*"],
+		"releaseTagPattern": "{version}",
+		"changelog": {
+			"workspaceChangelog": {
+				"createRelease": "github",
+				"file": false
+			},
+			"git": {
+				"commit": false,
+				"stageChanges": false,
+				"tag": false
+			}
+		},
+		"version": {
+			"generatorOptions": {
+				"packageRoot": "build/packages/{projectName}",
+				"currentVersionResolver": "registry",
+				"skipLockFileUpdate": true
+			},
+			"git": {
+				"commit": false,
+				"stageChanges": false,
+				"tag": false
+			}
+		}
+	}
 }

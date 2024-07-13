@@ -1,0 +1,70 @@
+# path to a directory with all packages
+storage: ../tmp/local-registry/storage
+max_body_size: 200mb
+
+auth:
+  htpasswd:
+    file: ./htpasswd
+    max_users: 1
+
+# a list of other known repositories we can talk to
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+    maxage: 60m
+    max_fails: 20
+    fail_timeout: 2m
+
+packages:
+  '@*/*':
+    # scoped packages
+    access: $all
+    publish: $authenticated
+    unpublish: $authenticated
+    proxy: npmjs
+
+  '**':
+    # allow all users (including non-authenticated users) to read and
+    # publish all packages
+    access: $all
+
+    # allow all users (including non-authenticated users) to publish/publish packages
+    publish: $authenticated
+    unpublish: $authenticated
+
+    # if package is not available locally, proxy requests to 'yarn' registry
+    proxy: npmjs
+
+# log settings
+logs: { type: stdout, format: pretty, level: http }
+
+# Web Interface Settings
+web:
+  enable: true
+  title: 'Dev Config Repository'
+  logo: 'https://cdn-icons-png.flaticon.com/512/6671/6671938.png'
+  primary_color: '#4b5e40'
+  gravatar: true
+  scope: '@scope'
+  sort_packages: asc
+  darkMode: true
+  favicon: https://cdn-icons-png.flaticon.com/512/6671/6671938.png
+  rateLimit:
+    windowMs: 50000
+    max: 1000
+  pkgManagers:
+    - npm
+    - yarn
+    - pnpm
+  login: true
+  html_cache: true
+  showInfo: true
+  showSettings: true
+  showThemeSwitch: true
+  showFooter: true
+  showSearch: true
+  showDownloadTarball: true
+  showRaw: true
+
+publish:
+  allow_offline: true # set offline to true to allow publish offline

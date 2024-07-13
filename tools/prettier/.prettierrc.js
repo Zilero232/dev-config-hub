@@ -1,13 +1,13 @@
 /** @type {import('prettier').Config} */
 
 module.exports = {
-  printWidth: 100,
-  singleQuote: true,
-  jsxSingleQuote: true,
-  trailingComma: 'none',
-  semi: true,
-  tabWidth: 2,
-  useTabs: true,
-  endOfLine: 'lf',
-  arrowParens: 'always'
+	printWidth: 100,
+	singleQuote: true,
+	jsxSingleQuote: true,
+	trailingComma: 'none',
+	semi: true,
+	tabWidth: 2,
+	useTabs: true,
+	endOfLine: 'lf',
+	arrowParens: 'always'
 };
