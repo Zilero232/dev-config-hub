@@ -2,10 +2,10 @@
  * Before committing, it changes the type to a pre-selected and prepared emoji
  */
 
-const fs = require('node:fs')
+const fs = require('node:fs');
 
 const commitTypes = {
-  happy: ':tada:', // Mega happy
+	happy: ':tada:', // Mega happy
 	feat: ':sparkles:', // Adding a new feature
 	fix: ':bug:', // Fixing a bug
 	docs: ':pencil:', // Updating documentation
