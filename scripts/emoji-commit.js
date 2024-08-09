@@ -48,7 +48,7 @@ const processCommitMessage = commitMsgFile => {
 
 		if (emoji) {
 			// Forming a new commit message with the addition of an emoji before the rest of the message
-			const newCommitMsg = `${type} ${emoji} ${commitMsg.slice(match[0].length + 1).trim()}`;
+			const newCommitMsg = `${emoji} ${commitMsg.slice(match[0].length + 1).trim()}`;
 
 			// Writing the new message back to the file
 			writeCommitMessage(commitMsgFile, newCommitMsg);
