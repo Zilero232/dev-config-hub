@@ -2,10 +2,10 @@
  * Before committing, it changes the type to a pre-selected and prepared emoji
  */
 
-const fs = require('fs');
+const fs = require('node:fs')
 
 const commitTypes = {
-	init: ':tada:', // Adding a new feature
+  happy: ':tada:', // Mega happy
 	feat: ':sparkles:', // Adding a new feature
 	fix: ':bug:', // Fixing a bug
 	docs: ':pencil:', // Updating documentation
@@ -14,11 +14,11 @@ const commitTypes = {
 	test: ':white_check_mark:', // Adding tests
 	build: ':hammer:', // Changes in the build system or external dependencies
 	perf: ':zap:', // Improving performance
-	chore: ':wrench:' // Other changes that don't modify src or test files
+	chore: ':wrench:', // Other changes that don't modify src or test files
 };
 
 // Function for reading a commit message from a file
-const readCommitMessage = (commitMsgFile) => {
+const readCommitMessage = commitMsgFile => {
 	try {
 		return fs.readFileSync(commitMsgFile, 'utf8').trim();
 	} catch (error) {
@@ -38,7 +38,7 @@ const writeCommitMessage = (commitMsgFile, newCommitMsg) => {
 };
 
 // Function for processing the commit message
-const processCommitMessage = (commitMsgFile) => {
+const processCommitMessage = commitMsgFile => {
 	const commitMsg = readCommitMessage(commitMsgFile);
 	const match = commitMsg.match(/^(\w+)(?=:)\s*/);
 

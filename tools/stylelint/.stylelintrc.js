@@ -12,8 +12,8 @@ module.exports = {
 			// Disallow qualifying a selector by type, except for attributes and classes
 			true,
 			{
-				ignore: ['attribute', 'class']
-			}
+				ignore: ['attribute', 'class'],
+			},
 		],
 		'selector-attribute-quotes': 'always', // Always quote attribute values in selectors
 		'declaration-no-important': true, // Disallow the use of !important in declarations
@@ -25,26 +25,26 @@ module.exports = {
 		'selector-class-pattern': [
 			'^([a-z][a-z0-9]*)(_[a-z0-9]+)*$', // Enforce snake_case for class selectors
 			{
-				message: 'Expected class selector to be snake_case'
-			}
+				message: 'Expected class selector to be snake_case',
+			},
 		],
 		'keyframes-name-pattern': [
 			'^([a-z][a-z0-9]*)(_[a-z0-9]+)*$', // Enforce snake_case for keyframe names
 			{
-				message: 'Expected keyframe name to be snake_case'
-			}
+				message: 'Expected keyframe name to be snake_case',
+			},
 		],
 		'scss/percent-placeholder-pattern': [
 			'^([a-z][a-z0-9]*)(_[a-z0-9]+)*$', // Enforce snake_case for SCSS %-placeholders
 			{
-				message: 'Expected pattern for %-placeholders to be snake_case'
-			}
+				message: 'Expected pattern for %-placeholders to be snake_case',
+			},
 		],
 		'scss/at-mixin-pattern': [
 			'^([a-z][a-z0-9]*)(_[a-z0-9]+)*$', // Enforce snake_case for SCSS mixins
 			{
-				message: 'Expected pattern for mixin to be snake_case'
-			}
-		]
-	}
+				message: 'Expected pattern for mixin to be snake_case',
+			},
+		],
+	},
 };

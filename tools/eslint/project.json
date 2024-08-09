@@ -1,5 +1,5 @@
 {
-	"name": "@zilero/eslint",
+	"name": "eslint",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "tools/eslint/index.js",
 	"projectType": "library"

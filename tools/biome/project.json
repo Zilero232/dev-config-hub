@@ -1,6 +1,6 @@
 {
-	"name": "stylelint",
+	"name": "biome",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
-	"sourceRoot": "tools/stylelint/index.js",
+	"sourceRoot": "tools/eslint/index.js",
 	"projectType": "library"
 }

@@ -1,5 +1,3 @@
-const jest = require('./gulp.js');
+const gulp = require('./gulp.js');
 
-module.exports = {
-	jest
-};
+module.exports = { gulp };

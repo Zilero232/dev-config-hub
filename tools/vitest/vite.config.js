@@ -3,5 +3,5 @@
 module.exports = {
 	include: ['**/*.test.ts'],
 	globals: true,
-	environment: 'jsdom'
+	environment: 'jsdom',
 };

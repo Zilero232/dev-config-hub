@@ -4,7 +4,7 @@ To make the commit history more readable and structured, we use emojis to denote
 
 | Emoji              | Commit Type | Description                                                |
 | ------------------ | ----------- | ---------------------------------------------------------- |
-| :tada:             | `init`      | Initializing the project                                   |
+| :tada:             | `happy`     | Mega happiness                                             |
 | :sparkles:         | `feat`      | Adding a new feature                                       |
 | :bug:              | `fix`       | Fixing a bug                                               |
 | :pencil:           | `docs`      | Updating documentation                                     |

@@ -1,5 +1,5 @@
 {
-	"name": "@zilero/vitest",
+	"name": "vitest",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "tools/vitest/index.js",
 	"projectType": "library"

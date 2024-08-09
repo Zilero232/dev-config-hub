@@ -4,20 +4,20 @@ module.exports = {
 	env: {
 		browser: true, // Enable browser global variables
 		node: true, // Enable Node.js global variables
-		es2021: true // Enable ECMAScript 2021 features
+		es2021: true, // Enable ECMAScript 2021 features
 	},
 	extends: [
 		'airbnb-base', // Extend Airbnb's base JavaScript style guide
 		'plugin:node/recommended', // Use Node.js recommended rules
 		'plugin:eslint-comments/recommended', // Use recommended rules for eslint-comments plugin
 		'plugin:promise/recommended', // Use recommended rules for promise plugin
-		'plugin:prettier/recommended' // Integrate Prettier with ESLint
+		'plugin:prettier/recommended', // Integrate Prettier with ESLint
 	],
 	plugins: ['simple-import-sort', 'prettier'], // Use simple-import-sort and Prettier plugins
 	ignorePatterns: ['dist'], // Ignore the dist directory
 	parserOptions: {
 		ecmaVersion: 'latest', // Use the latest ECMAScript version
-		sourceType: 'module' // Enable ECMAScript modules
+		sourceType: 'module', // Enable ECMAScript modules
 	},
 	rules: {
 		'max-len': 'off', // Turn off max length rule
@@ -27,8 +27,8 @@ module.exports = {
 		'no-console': [
 			'warn',
 			{
-				allow: ['info', 'error']
-			}
+				allow: ['info', 'error'],
+			},
 		], // Warn on console usage except for info and error
 		'sort-imports': 'off', // Turn off sort-imports rule
 		'import/order': 'off', // Turn off import/order rule
@@ -53,36 +53,36 @@ module.exports = {
 					// Other relative imports:
 					['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'], // Group other relative imports
 					// Style imports:
-					['^.+\\.s?css$'] // Group style imports
-				]
-			}
+					['^.+\\.s?css$'], // Group style imports
+				],
+			},
 		],
 		'require-await': 'error', // Error on async functions without await
 		'node/no-unpublished-require': 'off', // Turn off node/no-unpublished-require rule
-		'node/no-missing-require': 'off' // Turn off node/no-missing-require rule
+		'node/no-missing-require': 'off', // Turn off node/no-missing-require rule
 	},
 	overrides: [
 		{
 			files: ['*.ts', '*.tsx'], // Apply these settings to TypeScript files
 			parser: '@typescript-eslint/parser', // Use @typescript-eslint/parser for TypeScript files
 			parserOptions: {
-				project: './tsconfig.json' // Specify the path to the TypeScript config file
+				project: './tsconfig.json', // Specify the path to the TypeScript config file
 			},
 			extends: [
 				'airbnb-typescript/base', // Extend Airbnb's base TypeScript style guide
 				'plugin:@typescript-eslint/recommended', // Use recommended rules for TypeScript
 				'plugin:@typescript-eslint/recommended-requiring-type-checking', // Use recommended rules for TypeScript requiring type checking
-				'plugin:prettier/recommended' // Integrate Prettier with ESLint for TypeScript
+				'plugin:prettier/recommended', // Integrate Prettier with ESLint for TypeScript
 			],
 			settings: {
 				'import/parsers': {
-					'@typescript-eslint/parser': ['.ts', '.tsx'] // Use @typescript-eslint/parser for import parsing
+					'@typescript-eslint/parser': ['.ts', '.tsx'], // Use @typescript-eslint/parser for import parsing
 				},
 				'import/resolver': {
 					typescript: {
-						project: './tsconfig.json' // Specify the path to the TypeScript config file for import resolver
-					}
-				}
+						project: './tsconfig.json', // Specify the path to the TypeScript config file for import resolver
+					},
+				},
 			},
 			rules: {
 				'import/order': 'off', // Turn off import/order rule
@@ -97,19 +97,19 @@ module.exports = {
 					'warn',
 					{
 						allowBoolean: true,
-						allowNullish: true
-					} // Warn on restrict-template-expressions allowing booleans and nullish
+						allowNullish: true,
+					}, // Warn on restrict-template-expressions allowing booleans and nullish
 				],
 				'@typescript-eslint/consistent-type-imports': [
 					'error',
 					{
 						prefer: 'type-imports',
-						disallowTypeAnnotations: false
-					} // Enforce consistent type imports
+						disallowTypeAnnotations: false,
+					}, // Enforce consistent type imports
 				],
 				'require-await': 'off', // Turn off require-await rule for JavaScript
-				'@typescript-eslint/require-await': 'error' // Enforce require-await rule for TypeScript
-			}
-		}
-	]
+				'@typescript-eslint/require-await': 'error', // Enforce require-await rule for TypeScript
+			},
+		},
+	],
 };

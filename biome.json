@@ -1,0 +1,3 @@
+{
+	"extends": ["./tools/biome/biome.json"]
+}

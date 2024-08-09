@@ -9,7 +9,7 @@ module.exports = {
 			2,
 			'always',
 			[
-				'init', // Initializing the project
+				'happy', // Mega happiness
 				'feat', // Adding a new feature
 				'fix', // Fixing a bug
 				'docs', // Updating documentation
@@ -18,8 +18,8 @@ module.exports = {
 				'test', // Adding tests
 				'build', // Changes in the build system or external dependencies
 				'perf', // Improving performance
-				'chore' // Other changes that don't modify src or test files
-			]
-		]
-	}
+				'chore', // Other changes that don't modify src or test files
+			],
+		],
+	},
 };

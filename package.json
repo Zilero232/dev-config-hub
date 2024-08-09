@@ -1,55 +1,57 @@
 {
-	"name": "dev-config-hub",
-	"version": "1.0.0",
-	"description": "This project provides a set of configurations and development tools, including settings for Prettier, ESLint, TypeScript and others.",
-	"license": "MIT",
-	"private": true,
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232"
-	},
-	"keywords": [
-		"eslint",
-		"gulp",
-		"jest",
-		"prettier",
-		"stylelint",
-		"tsconfig",
-		"vitest"
-	],
-	"bugs": {
-		"url": "https://github.com/Zilero232/dev-config-hub/issues"
-	},
-	"homepage": "https://github.com/Zilero232/dev-config-hub",
-	"repository": {
-		"url": "https://github.com/Zilero232/dev-config-hub"
-	},
-	"workspaces": [
-		"tools/*"
-	],
-	"scripts": {
-		"v:local-registry": "nx local-registry dev-config-hub",
-		"v:adduser": "pnpm adduser --registry http://localhost:4873/",
-		"v:set-password": "pnpm profile set password --registry http://localhost:4873/",
-		"v:publish": "pnpm publish --registry http://localhost:4873/",
-		"format": "nx format:write",
-		"check-format": "nx format:check",
-		"lint-staged": "lint-staged",
-		"prepare": "husky"
-	},
-	"devDependencies": {
-		"@commitlint/cli": "^19.3.0",
-		"@commitlint/config-conventional": "^19.2.2",
-		"@commitlint/format": "^19.3.0",
-		"@nx/js": "^19.4.3",
-		"@types/node": "^20.14.10",
-		"beachball": "^2.43.1",
-		"conventional-changelog-atom": "^5.0.0",
-		"husky": "^9.0.11",
-		"lint-staged": "^15.2.7",
-		"nx": "^19.4.3",
-		"prettier": "^3.3.2",
-		"pretty-quick": "^4.0.0",
-		"verdaccio": "^5.31.1"
-	}
+  "name": "dev-config-hub",
+  "version": "1.0.0",
+  "description": "This project provides a set of configurations and development tools, including settings for Prettier, ESLint, TypeScript and others.",
+  "license": "MIT",
+  "private": true,
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232"
+  },
+  "keywords": [
+    "biome",
+    "eslint",
+    "gulp",
+    "jest",
+    "prettier",
+    "stylelint",
+    "tsconfig",
+    "vitest"
+  ],
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "workspaces": [
+    "tools/*"
+  ],
+  "scripts": {
+    "prepare": "husky",
+    "biome:check": "biome check --no-errors-on-unmatched",
+    "biome:lint": "biome check --write --unsafe --no-errors-on-unmatched",
+    "biome:check-staged": "biome check --files-ignore-unknown=true --no-errors-on-unmatched --staged",
+    "biome:lint-staged": "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched --staged",
+    "v:local-registry": "nx local-registry dev-config-hub",
+    "v:adduser": "pnpm adduser --registry http://localhost:4873/",
+    "v:set-password": "pnpm profile set password --registry http://localhost:4873/",
+    "v:publish": "pnpm publish --registry http://localhost:4873/",
+    "graph": "nx graph"
+  },
+  "devDependencies": {
+    "@nrwl/nx-cloud": "^19.0.0",
+    "@biomejs/biome": "1.8.3",
+    "@commitlint/cli": "^19.3.0",
+    "@commitlint/config-conventional": "^19.2.2",
+    "@commitlint/format": "^19.3.0",
+    "@nx/js": "^19.4.3",
+    "@types/node": "^20.14.10",
+    "beachball": "^2.43.1",
+    "conventional-changelog-atom": "^5.0.0",
+    "husky": "^9.0.11",
+    "nx": "^19.4.3",
+    "verdaccio": "^5.31.1"
+  }
 }

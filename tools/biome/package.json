@@ -1,0 +1,41 @@
+{
+	"name": "@zilero/biome",
+	"description": "biome config",
+	"license": "MIT",
+	"version": "1.0.0",
+	"scripts": {
+		"biome:version": "biome version",
+		"biome:check": "biome check --no-errors-on-unmatched",
+		"biome:lint": "biome check --write --unsafe --no-errors-on-unmatched",
+		"biome:staged": "biome check --staged"
+	},
+	"keywords": [
+		"biome",
+		"biomejs",
+		"config"
+	],
+	"author": {
+		"name": "Artemev Alexandr",
+		"url": "https://github.com/Zilero232"
+	},
+	"bugs": {
+		"url": "https://github.com/Zilero232/dev-config-hub/issues"
+	},
+	"homepage": "https://github.com/Zilero232/dev-config-hub",
+	"repository": {
+		"url": "https://github.com/Zilero232/dev-config-hub"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": [
+		"./biome.json"
+	],
+	"main": "index.js",
+	"peerDependencies": {
+		"@biomejs/biome": "^1.7.3"
+	},
+	"dependencies": {
+		"@biomejs/biome": "1.8.3"
+	}
+}
