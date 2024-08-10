@@ -1,6 +1,6 @@
 <p align="center">
   <h1 align="center">Dev Config Hub 🚀</h1>
-  <p align="center">Your Ultimate Development Toolkit</p>
+  <p align="center">Your Ultimate Development Toolkit.</p>
 </p>
 
 <div align="center">
