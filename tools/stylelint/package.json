@@ -1,14 +1,36 @@
 {
 	"name": "@zilero/stylelint",
-	"description": "stylelint config",
+  "icon": "💅",
+  "displayName": "✨ Zilero Stylelint Config",
+	"description": "💅 Opinionated Stylelint configuration for consistent CSS/SCSS styling",
 	"license": "MIT",
 	"version": "1.0.0",
 	"keywords": [
-		"stylelint"
+    "stylelint",
+    "stylelint-config",
+    "css",
+    "scss",
+    "sass",
+    "style",
+    "lint",
+    "linter",
+    "styleguide",
+    "css-modules"
 	],
+  "scripts": {
+    "lint:style": "stylelint \"**/*.{css,scss,sass}\"",
+    "lint:style:fix": "stylelint \"**/*.{css,scss,sass}\" --fix",
+    "lint:style:watch": "onchange \"**/*.{css,scss,sass}\" -- stylelint {{changed}} --fix",
+    "lint:style:ci": "stylelint \"**/*.{css,scss,sass}\" --max-warnings 0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
 	"author": {
 		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232"
+		"url": "https://github.com/Zilero232",
+    "email": "sasha.artemev.1002@mail.ru"
 	},
 	"bugs": {
 		"url": "https://github.com/Zilero232/dev-config-hub/issues"
@@ -21,9 +43,13 @@
 		"access": "public"
 	},
 	"files": [
-		".stylelintrc.js"
+		".stylelintrc.js",
+    "index.js"
 	],
 	"main": "index.js",
+  "categories": [
+    "Linters"
+  ],
 	"peerDependencies": {
 		"stylelint": "^16.6.1"
 	},

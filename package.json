@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "This project provides a set of configurations and development tools, including settings for Prettier, ESLint, TypeScript and others.",
   "license": "MIT",
-  "private": true,
   "author": {
     "name": "Artemev Alexandr",
     "url": "https://github.com/Zilero232"
@@ -11,7 +10,6 @@
   "keywords": [
     "biome",
     "eslint",
-    "gulp",
     "jest",
     "prettier",
     "stylelint",
@@ -23,35 +21,37 @@
   },
   "homepage": "https://github.com/Zilero232/dev-config-hub",
   "repository": {
-    "url": "https://github.com/Zilero232/dev-config-hub"
+    "url": "git+https://github.com/Zilero232/dev-config-hub.git"
   },
   "workspaces": [
     "tools/*"
   ],
   "scripts": {
     "prepare": "husky",
+    "build": "nx run-many --target=build --projects=tag:tool --parallel",
     "biome:check": "biome check --no-errors-on-unmatched",
     "biome:lint": "biome check --write --unsafe --no-errors-on-unmatched",
     "biome:check-staged": "biome check --files-ignore-unknown=true --no-errors-on-unmatched --staged",
     "biome:lint-staged": "biome check --write --files-ignore-unknown=true --no-errors-on-unmatched --staged",
     "v:local-registry": "nx local-registry dev-config-hub",
-    "v:adduser": "pnpm adduser --registry http://localhost:4873/",
-    "v:set-password": "pnpm profile set password --registry http://localhost:4873/",
-    "v:publish": "pnpm publish --registry http://localhost:4873/",
-    "graph": "nx graph"
+    "v:login": "login http://localhost:4873/",
+    "v:adduser": "adduser --registry http://localhost:4873/",
+    "v:set-password": "profile set password --registry http://localhost:4873/",
+    "v:publish:all": "nx run-many --target=publish --projects=tag:tool --parallel",
+    "release": "node scripts/release.js",
+    "release:dry": "node scripts/release.js --dryRun --verbose",
+    "commit": "git cz"
   },
   "devDependencies": {
-    "@nrwl/nx-cloud": "^19.0.0",
-    "@biomejs/biome": "1.8.3",
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
-    "@commitlint/format": "^19.3.0",
-    "@nx/js": "^19.4.3",
     "@types/node": "^20.14.10",
-    "beachball": "^2.43.1",
-    "conventional-changelog-atom": "^5.0.0",
+    "@biomejs/biome": "1.8.3",
+    "commit-jazzer": "^1.1.0",
     "husky": "^9.0.11",
-    "nx": "^19.4.3",
     "verdaccio": "^5.31.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "commit-jazzer"
+    }
   }
 }

@@ -1,6 +1,8 @@
 {
-	"name": "@zilero/biome",
-	"description": "biome config",
+  "name": "@zilero/biome",
+  "icon": "🌿",
+  "displayName": "✨ Zilero Biome Config",
+	"description": "🌿 Modern formatter, linter, and more for JavaScript, TypeScript, JSX, and JSON",
 	"license": "MIT",
 	"version": "1.0.0",
 	"scripts": {
@@ -10,13 +12,22 @@
 		"biome:staged": "biome check --staged"
 	},
 	"keywords": [
-		"biome",
-		"biomejs",
-		"config"
+    "biome",
+    "biomejs",
+    "formatter",
+    "linter",
+    "typescript",
+    "javascript",
+    "jsx",
+    "json",
+    "config",
+    "prettier",
+    "eslint"
 	],
 	"author": {
 		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232"
+		"url": "https://github.com/Zilero232",
+    "email": "sasha.artemev.1002@mail.ru"
 	},
 	"bugs": {
 		"url": "https://github.com/Zilero232/dev-config-hub/issues"
@@ -25,13 +36,24 @@
 	"repository": {
 		"url": "https://github.com/Zilero232/dev-config-hub"
 	},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Zilero232"
+  },
 	"publishConfig": {
 		"access": "public"
 	},
 	"files": [
 		"./biome.json"
 	],
-	"main": "index.js",
+  "categories": [
+    "Formatters",
+    "Linters"
+  ],
 	"peerDependencies": {
 		"@biomejs/biome": "^1.7.3"
 	},

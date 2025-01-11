@@ -13,36 +13,43 @@
 		"default": {
 			"runner": "nx-cloud",
 			"options": {
-				"cacheableOperations": ["lint", "format"],
+				"cacheableOperations": ["publish", "build"],
 				"accessToken": "MTg4MDA5YmItYWM5MS00OTkzLWEwMGYtNjdlMjE1MDk0ZjZjfHJlYWQtd3JpdGU=",
 				"parallel": 2
 			}
 		}
 	},
 	"release": {
-		"projects": ["packages/*", "packages/nx/native-packages/*", "packages-legacy/*"],
-		"releaseTagPattern": "{version}",
+		"projects": ["tools/*"],
+		"projectsRelationship": "fixed",
+		"releaseTagPattern": "v{version}",
 		"changelog": {
+			"automaticFromRef": true,
 			"workspaceChangelog": {
 				"createRelease": "github",
-				"file": false
+				"file": "CHANGELOG.md"
 			},
 			"git": {
-				"commit": false,
-				"stageChanges": false,
-				"tag": false
+				"commit": true,
+				"commitMessage": "chore(release): 📦 version {version} [skip ci]",
+				"tag": true,
+				"tagMessage": "Release v{version}"
 			}
 		},
 		"version": {
 			"generatorOptions": {
-				"packageRoot": "build/packages/{projectName}",
+				"packageRoot": "dist/{projectName}",
 				"currentVersionResolver": "registry",
-				"skipLockFileUpdate": true
+				"fallbackCurrentVersionResolver": "disk",
+				"skipLockFileUpdate": true,
+				"versionSelection": "independent",
+				"firstRelease": true
 			},
 			"git": {
-				"commit": false,
-				"stageChanges": false,
-				"tag": false
+				"commit": true,
+				"commitMessage": "chore(release): 🔖 version {version}",
+				"tag": true,
+				"tagMessage": "Release v{version}"
 			}
 		}
 	}
