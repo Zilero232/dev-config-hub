@@ -43,15 +43,21 @@
     "commit": "git cz"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
-    "@biomejs/biome": "1.8.3",
-    "commit-jazzer": "^1.1.0",
-    "husky": "^9.0.11",
-    "verdaccio": "^5.31.1"
+    "@biomejs/biome": "1.9.4",
+    "@nrwl/nx-cloud": "^19.1.0",
+    "@nx/devkit": "^20.3.1",
+    "@nx/js": "^20.3.1",
+    "@types/node": "^22.10.5",
+    "commit-jazzer": "^1.1.1",
+    "dotenv": "^16.4.7",
+    "husky": "^9.1.7",
+    "nx": "20.3.1",
+    "verdaccio": "^5.0.4",
+    "yargs": "^17.7.2"
   },
   "config": {
     "commitizen": {
-      "path": "commit-jazzer"
+      "path": "node_modules/commit-jazzer"
     }
   }
 }

@@ -1,8 +1,10 @@
-# 🎯 @zilero/jest
+<p align="center">
+  <h1 align="center">Jest Configuration 🎯</h1>
+</p>
 
 <p align="center">
   <a href="https://github.com/Zilero232/dev-config-hub">
-      <img src="https://img.shields.io/github/actions/workflow/status/Zilero232/dev-config-hub/integrate.yaml?label=CI&logo=GitHub" alt="CI status">
+      <img src="https://img.shields.io/github/actions/workflow/status/Zilero232/dev-config-hub/integrate.yml?label=CI&logo=GitHub" alt="CI status">
     </a>
   <a href="https://www.npmjs.com/package/@zilero/jest">
       <img src="https://img.shields.io/npm/dm/@zilero/jest?logo=NPM" alt="npm downloads">

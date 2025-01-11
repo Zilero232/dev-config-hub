@@ -6,7 +6,7 @@ const glob = require('glob');
 const config = {
 	sourceDir: 'tools',
 	outputDir: 'dist',
-	rootFiles: ['CODE_OF_CONDUCT.md', 'CONTRIBUTING.md', 'LICENSE'],
+	rootFiles: ['LICENSE'],
 	ignoredPatterns: ['**/node_modules/**', '**/*.test.*', '**/__tests__/**', '**/project.json'],
 };
 

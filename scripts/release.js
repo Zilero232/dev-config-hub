@@ -1,9 +1,11 @@
+require('dotenv').config();
+
 const { releaseChangelog, releasePublish, releaseVersion } = require('nx/release');
 const { execSync } = require('node:child_process');
 const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
 
-// Сборка всех пакетов
+// Build all packages
 const buildAllPackages = async () => {
 	console.log('🏗️  Building all packages...');
 
@@ -13,17 +15,30 @@ const buildAllPackages = async () => {
 		});
 
 		console.log('✅ Build completed successfully');
+
 		return true;
 	} catch (error) {
 		console.error('❌ Build failed:', error);
+
 		return false;
 	}
 };
 
-// Парсинг аргументов командной строки
+// Parse command line arguments
 const parseOptions = async () => {
 	return yargs(hideBin(process.argv))
 		.version(false)
+		.option('firstRelease', {
+			description: 'First release',
+			type: 'boolean',
+			default: false,
+		})
+		.option('force', {
+			alias: 'f',
+			description: 'Force update existing tags',
+			type: 'boolean',
+			default: false,
+		})
 		.option('releaseVersion', {
 			description: 'Explicit version specifier to use',
 			type: 'string',
@@ -47,19 +62,26 @@ const parseOptions = async () => {
 		.parse();
 };
 
-// Обновление версий пакетов
+// Update package versions
 const updateVersions = async options => {
 	console.log('📦 Updating versions...');
+
+	// Add first release check
+	const isFirstRelease = options.firstRelease;
+
 	return releaseVersion({
 		specifier: options.releaseVersion,
 		dryRun: options.dryRun,
 		verbose: options.verbose,
+		// Skip git-tag check for first release
+		skipProjectVersionCheck: isFirstRelease,
 	});
 };
 
-// Генерация changelog
+// Generate changelog
 const generateChangelog = async (options, versionData, workspaceVersion) => {
 	console.log('📝 Generating changelog...');
+
 	await releaseChangelog({
 		versionData,
 		version: workspaceVersion,
@@ -68,7 +90,7 @@ const generateChangelog = async (options, versionData, workspaceVersion) => {
 	});
 };
 
-// Публикация пакетов
+// Publish packages
 const publishPackages = async options => {
 	console.log('🚀 Publishing packages...');
 
@@ -78,26 +100,52 @@ const publishPackages = async options => {
 	});
 };
 
-// Проверка результатов публикации
+// Check publish results
 const checkPublishResults = publishResults => {
 	return Object.entries(publishResults).every(([pkg, result]) => {
 		if (result.code !== 0) {
 			console.error(`❌ Failed to publish ${pkg}`);
+
 			return false;
 		}
+
 		console.log(`✅ Published ${pkg} successfully`);
+
 		return true;
 	});
 };
 
-// Основной процесс релиза
+// Setup NPM auth
+const setupNpmAuth = async () => {
+	if (!process.env.NPM_TOKEN) {
+		console.error('❌ NPM_TOKEN not found in environment variables');
+
+		process.exit(1);
+	}
+
+	try {
+		execSync(`npm config set //registry.npmjs.org/:_authToken ${process.env.NPM_TOKEN}`, {
+			stdio: 'inherit',
+		});
+	} catch (error) {
+		console.error('❌ Error setting npm configuration:', error);
+
+		process.exit(1);
+	}
+};
+
+// Main release process
 const release = async () => {
 	try {
+		// Setup NPM auth
+		await setupNpmAuth();
+
 		const options = await parseOptions();
 
 		// 1. Build packages
 		if (!options.skipBuild) {
 			const buildSuccess = await buildAllPackages();
+
 			if (!buildSuccess) {
 				process.exit(1);
 			}
@@ -117,16 +165,19 @@ const release = async () => {
 
 		if (success) {
 			console.log('🎉 Release completed successfully!');
+
 			process.exit(0);
 		} else {
 			console.error('❌ Release failed');
+
 			process.exit(1);
 		}
 	} catch (error) {
 		console.error('❌ Release process failed:', error);
+
 		process.exit(1);
 	}
 };
 
-// Запуск процесса
+// Start process
 release();

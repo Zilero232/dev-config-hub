@@ -13,6 +13,7 @@
 		"default": {
 			"runner": "nx-cloud",
 			"options": {
+				"cacheDirectory": ".nx/cache",
 				"cacheableOperations": ["publish", "build"],
 				"accessToken": "MTg4MDA5YmItYWM5MS00OTkzLWEwMGYtNjdlMjE1MDk0ZjZjfHJlYWQtd3JpdGU=",
 				"parallel": 2

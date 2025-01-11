@@ -1,21 +1,26 @@
 <p align="center">
   <h1 align="center">Dev Config Hub 🚀</h1>
-  <p align="center">Your Ultimate Development Toolkit.</p>
+</p>
+
+<p align="center">
+  <b>Your Ultimate Development Configuration Suite</b>
+</p>
+
+<p align="center">
+  Streamline your development workflow with our comprehensive collection of pre-configured development tools.
+  <br/>
+  Stop wasting time on configuration. Start building amazing things.
 </p>
 
 <div align="center">
 
 [![CI Status][ci-badge]][ci-url]
-[![npm version][npm-badge]][npm-url]
 [![MIT License][license-badge]][license-url]
 [![Author][author-badge]][author-url]
 [![Last Commit][commit-badge]][commit-url]
 
 [ci-badge]: https://github.com/biomejs/biome/actions/workflows/main.yml/badge.svg
-[ci-url]: https://github.com/Zilero232/dev-config-hub/actions/workflows/ci.yml
-
-[npm-badge]: https://badgen.net/npm/v/dev-config-hub?icon=npm&color=green
-[npm-url]: https://www.npmjs.com/package/dev-config-hub
+[ci-url]: https://github.com/Zilero232/dev-config-hub/actions/workflows/integrate.yml
 
 [license-badge]: https://badgen.net/github/license/Zilero232/dev-config-hub?color=yellow
 [license-url]: https://github.com/Zilero232/dev-config-hub/blob/main/LICENSE
@@ -24,25 +29,53 @@
 [author-url]: https://github.com/Zilero232
 
 [commit-badge]: https://badgen.net/github/last-commit/Zilero232/dev-config-hub/main?icon=github&color=orange
-[commit-url]: https://github.com/Zilero232/dev-config-hub/commits/maine
+[commit-url]: https://github.com/Zilero232/dev-config-hub/commits
 
 </div>
 
-**Dev Config Hub** is a comprehensive toolkit designed to streamline the setup and management of development environments. It provides pre-configured settings for popular tools like ESLint, Prettier, TypeScript, and others, ensuring a consistent and efficient development experience.
+<p align="center">
+  <b>🛠️ Professional • 🎯 Opinionated • 🔧 Maintainable • 🚀 Production-Ready</b>
+</p>
 
-## Key Features
+## Why Dev Config Hub?
 
-- **Ready-to-Use Configurations**: Pre-configured settings for ESLint, Prettier, TypeScript, and more.
-- **Automated Linting and Formatting**: Tools like Biome and Stylelint ensure your code is clean and consistent.
-- **Comprehensive Tooling**: Supports a wide range of tools, including Gulp, Jest, and Vitest.
-- **Easy Versioning and Publishing**: Simplify your workflow with built-in versioning and publishing scripts.
+Dev Config Hub provides battle-tested configurations for modern web development tools. We've spent countless hours fine-tuning these configurations so you don't have to.
 
-### Installation
+- 📦 **Zero Configuration** - Everything works out of the box
+- 🔄 **Consistent Standards** - Enforce best practices across your projects
+- ⚡ **Modern Defaults** - Always up-to-date with latest development standards
+- 🎨 **Customizable** - Use as-is or extend to match your needs
 
-Install Dev Config Hub by cloning the repository and installing dependencies:
+## Available Configurations
 
-```bash
-git clone https://github.com/Zilero232/dev-config-hub.git
-cd dev-config-hub
-pnpm install
-```
+### Linters & Formatters
+
+- **[ESLint Config](https://www.npmjs.com/package/@zilero/eslint)** - Configuration with popular rules and plugins
+  - Airbnb style guide
+  - Import sorting
+  - React/Next.js rules
+
+- **[Prettier Config](https://www.npmjs.com/package/@zilero/prettier)** - Code formatting
+  - Tabs vs spaces
+  - Line length
+  - Trailing commas
+  - File-specific settings
+
+- **[Stylelint Config](https://www.npmjs.com/package/@zilero/stylelint)** - CSS/SCSS linting
+  - Properties order
+  - BEM validation
+  - SCSS rules
+
+### TypeScript
+
+- **[TypeScript Configs](https://www.npmjs.com/package/@zilero/tsconfigs)** - Base TypeScript settings
+  - Strict mode
+  - Modern features support
+  - Path optimization
+  - React/Next.js settings
+
+### Testing
+
+- **[Jest Config](https://www.npmjs.com/package/@zilero/jest)** - Unit testing configuration
+- **[Vitest Config](https://www.npmjs.com/package/@zilero/vitest)** - Modern testing framework
+
