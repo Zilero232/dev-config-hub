@@ -14,6 +14,9 @@ node_modules
 .settings/
 *.sublime-workspace
 
+# Environment variables
+.env
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json
@@ -22,6 +25,7 @@ node_modules
 !.vscode/extensions.json
 
 # misc
+/logger
 /.sass-cache
 /connect.lock
 /coverage
