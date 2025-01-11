@@ -61,6 +61,14 @@ Dev Config Hub provides battle-tested configurations for modern web development 
   - Trailing commas
   - File-specific settings
 
+- **[Biome Config](https://www.npmjs.com/package/@zilero/biome)** - Fast and modern formatter & linter
+  - Zero configuration
+  - TypeScript support
+  - Built-in formatting
+  - Import sorting
+  - Code analysis
+  - Performance focused
+
 - **[Stylelint Config](https://www.npmjs.com/package/@zilero/stylelint)** - CSS/SCSS linting
   - Properties order
   - BEM validation

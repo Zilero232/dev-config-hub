@@ -1,9 +1,12 @@
 require('dotenv').config();
 
-const { releaseChangelog, releasePublish, releaseVersion } = require('nx/release');
+const { releaseVersion, releaseChangelog, releasePublish } = require('nx/release');
 const { execSync } = require('node:child_process');
-const yargs = require('yargs/yargs');
 const { hideBin } = require('yargs/helpers');
+const fs = require('node:fs');
+const glob = require('glob');
+const path = require('node:path');
+const yargs = require('yargs/yargs');
 
 // Build all packages
 const buildAllPackages = async () => {
@@ -62,6 +65,50 @@ const parseOptions = async () => {
 		.parse();
 };
 
+// Update versions in all package files
+const updateAllVersions = async workspaceVersion => {
+	console.log('📦 Updating versions in all package files...');
+
+	const rootPackagePath = path.join(process.cwd(), 'package.json');
+
+	if (rootPackagePath) {
+		console.log('📦 Updating root package.json version...');
+
+		const rootPackage = JSON.parse(fs.readFileSync(rootPackagePath, 'utf8'));
+
+		if (rootPackage) {
+			// Update root package.json version
+			rootPackage.version = workspaceVersion;
+
+			// Write updated package.json
+			fs.writeFileSync(rootPackagePath, `${JSON.stringify(rootPackage, null, 2)}\n`);
+		} else {
+			console.error('❌ Root package.json not found');
+		}
+	}
+
+	// Find all package.json files in packages/*
+	const packagePaths = glob.sync('tools/*/package.json');
+
+	if (packagePaths.length > 0) {
+		console.log('📦 Updating versions in all package files...');
+
+		for (const packagePath of packagePaths) {
+			const toolPackage = JSON.parse(fs.readFileSync(packagePath, 'utf8'));
+
+			if (toolPackage) {
+				// Update version
+				toolPackage.version = workspaceVersion;
+
+				// Write updated package.json
+				fs.writeFileSync(packagePath, `${JSON.stringify(toolPackage, null, 2)}\n`);
+			} else {
+				console.error('❌ Tool package.json not found');
+			}
+		}
+	}
+};
+
 // Update package versions
 const updateVersions = async options => {
 	console.log('📦 Updating versions...');
@@ -69,13 +116,23 @@ const updateVersions = async options => {
 	// Add first release check
 	const isFirstRelease = options.firstRelease;
 
-	return releaseVersion({
+	const versionData = await releaseVersion({
 		specifier: options.releaseVersion,
 		dryRun: options.dryRun,
 		verbose: options.verbose,
 		// Skip git-tag check for first release
 		skipProjectVersionCheck: isFirstRelease,
+		skipGitTag: options.force,
 	});
+
+	// Update root package.json
+	if (!options.dryRun) {
+		await updateAllVersions(versionData.workspaceVersion);
+	} else {
+		console.log('🔍 Dry run, skipping version update');
+	}
+
+	return versionData;
 };
 
 // Generate changelog
@@ -87,6 +144,8 @@ const generateChangelog = async (options, versionData, workspaceVersion) => {
 		version: workspaceVersion,
 		dryRun: options.dryRun,
 		verbose: options.verbose,
+		// Skip git-tag check if using force
+		skipGitTag: options.force,
 	});
 };
 
@@ -97,6 +156,8 @@ const publishPackages = async options => {
 	return releasePublish({
 		dryRun: options.dryRun,
 		verbose: options.verbose,
+		// Skip git-tag check if not using force
+		skipGitTag: !options.force,
 	});
 };
 
