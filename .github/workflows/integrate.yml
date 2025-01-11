@@ -46,7 +46,7 @@ jobs:
       # Step to install dependencies using PNPM.
       - name: Install dependencies
         if: steps.pnpm-cache.outputs.cache-hit != 'true'
-        run: pnpm install
+        run: pnpm install --no-frozen-lockfile
 
       # Step to run Biome.
       - name: Run Biome
