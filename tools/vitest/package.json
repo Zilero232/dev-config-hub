@@ -1,15 +1,40 @@
 {
 	"name": "@zilero/vitest",
-	"description": "vitest config",
+  "icon": "⚡️",
+  "displayName": "✨ Zilero Vitest Config",
+  "description": "⚡️ Opinionated Vitest configuration for modern testing",
 	"license": "MIT",
 	"version": "1.0.0",
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232",
+    "email": "sasha.artemev.1002@mail.ru"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:run": "vitest run",
+    "test:watch": "vitest watch",
+    "test:coverage": "vitest run --coverage",
+    "test:ci": "vitest run --coverage --reporter=json --reporter=junit",
+    "test:update": "vitest -u"
+  },
 	"keywords": [
-		"vitest"
+    "vitest",
+    "vite",
+    "testing",
+    "test",
+    "typescript",
+    "react",
+    "vue",
+    "jest",
+    "unit-testing",
+    "config"
 	],
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232"
-	},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
 	"bugs": {
 		"url": "https://github.com/Zilero232/dev-config-hub/issues"
 	},
@@ -22,10 +47,14 @@
 	},
 	"files": [
 		"vite.config.js",
-		"index.d.ts"
+		"index.d.ts",
+    "index.js"
 	],
 	"main": "index.js",
 	"types": "index.d.ts",
+  "categories": [
+    "Testing"
+  ],
 	"peerDependencies": {
 		"vitest": "^1.6.0",
 		"jsdom": "^24.1.0"

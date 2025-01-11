@@ -1,11 +1,3 @@
 #!/bin/sh
-set -eu
 
-if git status --short | grep --quiet '^MM'; then
-  printf '%s\n' "ERROR: Some staged files have unstaged changes" >&2
-  exit 1;
-fi
-
-pnpm biome:lint-staged
-
-git update-index --again
+pnpm biome:check-staged

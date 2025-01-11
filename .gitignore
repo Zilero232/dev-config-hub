@@ -1,10 +1,6 @@
-# Compiled binary addons (http://nodejs.org/api/addons.html)
-build/Release
-
 # compiled output
 dist
 tmp
-/out-tsc
 
 # dependencies
 node_modules

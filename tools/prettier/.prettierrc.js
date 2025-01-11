@@ -1,7 +1,7 @@
 /** @type {import('prettier').Config} */
 
 module.exports = {
-	printWidth: 100,
+	printWidth: 150,
 	singleQuote: true,
 	jsxSingleQuote: true,
 	trailingComma: 'none',

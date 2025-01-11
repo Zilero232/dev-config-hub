@@ -1,9 +1,3 @@
-const eslintReact = require('./.eslintrc.react.js');
-const eslintNode = require('./.eslintrc.node.js');
+const { eslint } = require('./eslint.config.js');
 
-module.exports = {
-	eslint: {
-		react: eslintReact,
-		node: eslintNode,
-	},
-};
+module.exports = { eslint };

@@ -1,0 +1,53 @@
+name: Integration
+
+on:
+  # Trigger the workflow on pull requests targeting the `main` branch.
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        # This defines the Node.js versions to run the tests on.
+        # The tests will run in parallel for each of these Node versions.
+        node-version: [18.x, 20.x, 22.x]
+
+    steps:
+      # Step to check out the repository code.
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step to install pnpm.
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+       # Step to cache the `node_modules` directory to improve performance of subsequent runs.
+      - name: Cache Node modules
+        id: pnpm-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # Step to set up Node.js with the version from the matrix.
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+
+      # Step to install dependencies using PNPM.
+      - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      # Step to run Biome.
+      - name: Run Biome
+        run: pnpm biome:check-staged

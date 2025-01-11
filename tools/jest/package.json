@@ -1,15 +1,37 @@
 {
 	"name": "@zilero/jest",
-	"description": "jest config",
+  "displayName": "✨ Zilero Jest Config",
+	"description": "🃏 Opinionated Jest configuration for React and TypeScript projects",
 	"license": "MIT",
 	"version": "1.0.0",
 	"keywords": [
-		"jest"
+		"jest",
+    "testing",
+    "test",
+    "typescript",
+    "react",
+    "react-testing",
+    "jest-config",
+    "config",
+    "unit-testing",
+    "testing-library"
 	],
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232"
-	},
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232",
+    "email": "sasha.artemev.1002@mail.ru"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --ci --coverage",
+    "test:update": "jest -u"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
 	"bugs": {
 		"url": "https://github.com/Zilero232/dev-config-hub/issues"
 	},
@@ -21,9 +43,13 @@
 		"access": "public"
 	},
 	"files": [
-		"jest.config.js"
+		"jest.config.js",
+    "index.js"
 	],
 	"main": "index.js",
+  "categories": [
+    "Testing"
+  ],
 	"peerDependencies": {
 		"jest": "^29.7.0",
 		"ts-jest": "^29.1.2"

@@ -2,5 +2,22 @@
 	"name": "vitest",
 	"$schema": "../../node_modules/nx/schemas/project-schema.json",
 	"sourceRoot": "tools/vitest/index.js",
-	"projectType": "library"
+	"projectType": "library",
+	"targets": {
+		"build": {
+			"executor": "nx:run-commands",
+			"options": {
+				"command": "node scripts/build.js vitest"
+			}
+		},
+		"publish": {
+			"executor": "nx:run-commands",
+			"options": {
+				"cwd": "dist/vitest",
+				"commands": ["pnpm unpublish @zilero/vitest --force & exit 0", "pnpm publish --registry --force --no-git-checks"],
+				"parallel": false
+			}
+		}
+	},
+	"tags": ["tool"]
 }
