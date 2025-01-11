@@ -14,7 +14,7 @@
 			"runner": "nx-cloud",
 			"options": {
 				"cacheDirectory": ".nx/cache",
-				"cacheableOperations": ["publish", "build"],
+				"cacheableOperations": ["publish"],
 				"accessToken": "MTg4MDA5YmItYWM5MS00OTkzLWEwMGYtNjdlMjE1MDk0ZjZjfHJlYWQtd3JpdGU=",
 				"parallel": 2
 			}
@@ -31,26 +31,24 @@
 				"file": "CHANGELOG.md"
 			},
 			"git": {
-				"commit": true,
-				"commitMessage": "chore(release): 📦 version {version} [skip ci]",
-				"tag": true,
-				"tagMessage": "Release v{version}"
+				"commit": false,
+				"stageChanges": false,
+				"tag": false
 			}
 		},
 		"version": {
 			"generatorOptions": {
 				"packageRoot": "dist/{projectName}",
-				"currentVersionResolver": "registry",
+				"currentVersionResolver": "disk",
 				"fallbackCurrentVersionResolver": "disk",
 				"skipLockFileUpdate": true,
 				"versionSelection": "independent",
 				"firstRelease": true
 			},
 			"git": {
-				"commit": true,
-				"commitMessage": "chore(release): 🔖 version {version}",
-				"tag": true,
-				"tagMessage": "Release v{version}"
+				"commit": false,
+				"stageChanges": false,
+				"tag": false
 			}
 		}
 	}
