@@ -1,11 +1,11 @@
 {
-	"name": "@zilero/jest",
+  "name": "@zilero/jest",
   "displayName": "✨ Zilero Jest Config",
-	"description": "🃏 Opinionated Jest configuration for React and TypeScript projects",
-	"license": "MIT",
-	"version": "1.0.0",
-	"keywords": [
-		"jest",
+  "description": "🃏 Opinionated Jest configuration for React and TypeScript projects",
+  "license": "MIT",
+  "version": "1.1.0",
+  "keywords": [
+    "jest",
     "testing",
     "test",
     "typescript",
@@ -15,7 +15,7 @@
     "config",
     "unit-testing",
     "testing-library"
-	],
+  ],
   "author": {
     "name": "Artemev Alexandr",
     "url": "https://github.com/Zilero232",
@@ -32,38 +32,38 @@
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   },
-	"bugs": {
-		"url": "https://github.com/Zilero232/dev-config-hub/issues"
-	},
-	"homepage": "https://github.com/Zilero232/dev-config-hub",
-	"repository": {
-		"url": "https://github.com/Zilero232/dev-config-hub"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": [
-		"jest.config.js",
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "jest.config.js",
     "index.js"
-	],
-	"main": "index.js",
+  ],
+  "main": "index.js",
   "categories": [
     "Testing"
   ],
-	"peerDependencies": {
-		"jest": "^29.7.0",
-		"ts-jest": "^29.1.2"
-	},
-	"peerDependenciesMeta": {
-		"ts-jest": {
-			"optional": true
-		}
-	},
-	"devDependencies": {
-		"ts-jest": "^29.2.6"
-	},
-	"dependencies": {
-		"jest": "^29.7.0",
-		"jest-environment-jsdom": "^29.7.0"
-	}
+  "peerDependencies": {
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
+  },
+  "peerDependenciesMeta": {
+    "ts-jest": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "ts-jest": "^29.2.6"
+  },
+  "dependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
 }

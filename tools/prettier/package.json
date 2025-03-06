@@ -1,37 +1,37 @@
 {
 	"name": "@zilero/prettier",
-  "icon": "🎨",
-  "displayName": "✨ Zilero Prettier Config",
-  "description": "Prettier configuration preset",
+	"icon": "🎨",
+	"displayName": "✨ Zilero Prettier Config",
+	"description": "Prettier configuration preset",
 	"license": "MIT",
-	"version": "1.0.0",
+	"version": "1.1.0",
 	"keywords": [
 		"prettier",
-    "prettier-config",
-    "formatter",
-    "code-style",
-    "coding-style",
-    "typescript",
-    "javascript",
-    "react",
-    "jsx",
-    "formatting"
+		"prettier-config",
+		"formatter",
+		"code-style",
+		"coding-style",
+		"typescript",
+		"javascript",
+		"react",
+		"jsx",
+		"formatting"
 	],
-  "scripts": {
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
-    "format:watch": "onchange '**/*' -- prettier --write {{changed}}",
-    "format:staged": "pretty-quick --staged",
-    "format:ci": "prettier --check '**/*.{js,jsx,ts,tsx,json,md}'"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
+	"scripts": {
+		"format": "prettier --write .",
+		"format:check": "prettier --check .",
+		"format:watch": "onchange '**/*' -- prettier --write {{changed}}",
+		"format:staged": "pretty-quick --staged",
+		"format:ci": "prettier --check '**/*.{js,jsx,ts,tsx,json,md}'"
+	},
+	"engines": {
+		"node": ">=18.0.0",
+		"npm": ">=8.0.0"
+	},
 	"author": {
 		"name": "Artemev Alexandr",
 		"url": "https://github.com/Zilero232",
-    "email": "sasha.artemev.1002@mail.ru"
+		"email": "sasha.artemev.1002@mail.ru"
 	},
 	"bugs": {
 		"url": "https://github.com/Zilero232/dev-config-hub/issues"
@@ -45,16 +45,16 @@
 	},
 	"files": [
 		".prettierrc.js",
-    "index.js"
+		"index.js"
 	],
 	"main": "index.js",
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/Zilero232"
-  },
-  "categories": [
-    "Formatters"
-  ],
+	"funding": {
+		"type": "github",
+		"url": "https://github.com/sponsors/Zilero232"
+	},
+	"categories": [
+		"Formatters"
+	],
 	"peerDependencies": {
 		"prettier": "^3.3.2"
 	},

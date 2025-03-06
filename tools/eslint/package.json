@@ -1,76 +1,76 @@
 {
-	"name": "@zilero/eslint",
-	"icon": "🎯",
-	"displayName": "✨ Zilero ESLint Config",
-	"description": "🎯 Comprehensive ESLint configuration for React and Node.js projects",
-	"license": "MIT",
-	"version": "1.0.0",
-	"keywords": [
-		"eslint",
-		"eslint-config",
-		"react",
-		"node",
-		"typescript",
-		"javascript",
-		"linting",
-		"prettier",
-		"style-guide",
-		"code-quality"
-	],
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232",
-		"email": "sasha.artemev.1002@mail.ru"
-	},
-	"bugs": {
-		"url": "https://github.com/Zilero232/dev-config-hub/issues"
-	},
-	"homepage": "https://github.com/Zilero232/dev-config-hub",
-	"repository": {
-		"url": "https://github.com/Zilero232/dev-config-hub"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
+  "name": "@zilero/eslint",
+  "icon": "🎯",
+  "displayName": "✨ Zilero ESLint Config",
+  "description": "🎯 Comprehensive ESLint configuration for React and Node.js projects",
+  "license": "MIT",
+  "version": "1.1.0",
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "react",
+    "node",
+    "typescript",
+    "javascript",
+    "linting",
+    "prettier",
+    "style-guide",
+    "code-quality"
+  ],
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232",
+    "email": "sasha.artemev.1002@mail.ru"
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "types": "index.d.ts",
-	"files": [
-		"utils",
-		"index.js",
-		"index.d.ts",
-		"eslint.config.js"
-	],
-	"peerDependencies": {
-		"eslint": "^9.0.0"
-	},
-	"engines": {
-		"node": ">=16.0.0",
-		"npm": ">=7.0.0"
-	},
-	"funding": {
-		"type": "github",
-		"url": "https://github.com/sponsors/Zilero232"
-	},
-	"categories": [
-		"Formatters",
-		"Linters"
-	],
-	"contributors": [
-		{
-			"name": "Artemev Alexandr",
-			"url": "https://github.com/Zilero232"
-		}
-	],
-	"dependencies": {
-		"@antfu/eslint-config": "4.6.0",
-		"@eslint-react/eslint-plugin": "1.30.2",
-		"@next/eslint-plugin-next": "15.2.1",
-		"@vue/compiler-sfc": "3.5.13",
-		"eslint": "9.21.0",
-		"eslint-flat-config-utils": "^2.0.1",
-		"eslint-plugin-jsx-a11y": "6.10.2",
-		"eslint-plugin-react": "7.37.4",
-		"eslint-plugin-react-hooks": "5.2.0",
-		"eslint-plugin-react-refresh": "0.4.19"
-	}
+  "files": [
+    "utils",
+    "index.js",
+    "index.d.ts",
+    "eslint.config.js"
+  ],
+  "peerDependencies": {
+    "eslint": "^9.0.0"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=7.0.0"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/Zilero232"
+  },
+  "categories": [
+    "Formatters",
+    "Linters"
+  ],
+  "contributors": [
+    {
+      "name": "Artemev Alexandr",
+      "url": "https://github.com/Zilero232"
+    }
+  ],
+  "dependencies": {
+    "@antfu/eslint-config": "4.6.0",
+    "@eslint-react/eslint-plugin": "1.30.2",
+    "@next/eslint-plugin-next": "15.2.1",
+    "@vue/compiler-sfc": "3.5.13",
+    "eslint": "9.21.0",
+    "eslint-flat-config-utils": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.4",
+    "eslint-plugin-react-hooks": "5.2.0",
+    "eslint-plugin-react-refresh": "0.4.19"
+  }
 }

@@ -2,16 +2,16 @@
   "name": "@zilero/biome",
   "icon": "🌿",
   "displayName": "✨ Zilero Biome Config",
-	"description": "🌿 Modern formatter, linter, and more for JavaScript, TypeScript, JSX, and JSON",
-	"license": "MIT",
-	"version": "1.0.0",
-	"scripts": {
-		"biome:version": "biome version",
-		"biome:check": "biome check --no-errors-on-unmatched",
-		"biome:lint": "biome check --write --unsafe --no-errors-on-unmatched",
-		"biome:staged": "biome check --staged"
-	},
-	"keywords": [
+  "description": "🌿 Modern formatter, linter, and more for JavaScript, TypeScript, JSX, and JSON",
+  "license": "MIT",
+  "version": "1.1.0",
+  "scripts": {
+    "biome:version": "biome version",
+    "biome:check": "biome check --no-errors-on-unmatched",
+    "biome:lint": "biome check --write --unsafe --no-errors-on-unmatched",
+    "biome:staged": "biome check --staged"
+  },
+  "keywords": [
     "biome",
     "biomejs",
     "formatter",
@@ -23,19 +23,19 @@
     "config",
     "prettier",
     "eslint"
-	],
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232",
+  ],
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232",
     "email": "sasha.artemev.1002@mail.ru"
-	},
-	"bugs": {
-		"url": "https://github.com/Zilero232/dev-config-hub/issues"
-	},
-	"homepage": "https://github.com/Zilero232/dev-config-hub",
-	"repository": {
-		"url": "https://github.com/Zilero232/dev-config-hub"
-	},
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
   "engines": {
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
@@ -44,20 +44,20 @@
     "type": "github",
     "url": "https://github.com/sponsors/Zilero232"
   },
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": [
-		"./biome.json"
-	],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "./biome.json"
+  ],
   "categories": [
     "Formatters",
     "Linters"
   ],
-	"peerDependencies": {
-		"@biomejs/biome": "^1.7.3"
-	},
-	"dependencies": {
-		"@biomejs/biome": "1.9.4"
-	}
+  "peerDependencies": {
+    "@biomejs/biome": "^1.7.3"
+  },
+  "dependencies": {
+    "@biomejs/biome": "1.9.4"
+  }
 }

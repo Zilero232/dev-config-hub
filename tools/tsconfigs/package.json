@@ -1,11 +1,11 @@
 {
-	"name": "@zilero/tsconfigs",
+  "name": "@zilero/tsconfigs",
   "icon": "🔷",
   "displayName": "✨ Zilero TypeScript Config",
   "description": "🔷 Opinionated TypeScript configuration for modern development",
-	"license": "MIT",
-	"version": "1.0.0",
-	"keywords": [
+  "license": "MIT",
+  "version": "1.1.0",
+  "keywords": [
     "typescript",
     "tsconfig",
     "config",
@@ -16,35 +16,35 @@
     "node",
     "strict",
     "modern"
-	],
+  ],
   "scripts": {
     "type-check": "tsc --noEmit",
     "type-check:watch": "tsc --noEmit --watch",
     "build:types": "tsc --declaration --emitDeclarationOnly",
     "check:project": "tsc --project tsconfig.json --noEmit"
   },
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232",
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232",
     "email": "sasha.artemev.1002@mail.ru"
-	},
-	"bugs": {
-		"url": "https://github.com/Zilero232/dev-config-hub/issues"
-	},
-	"homepage": "https://github.com/Zilero232/dev-config-hub",
-	"repository": {
-		"url": "https://github.com/Zilero232/dev-config-hub"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": [
-		"tsconfig.base.json",
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "tsconfig.base.json",
     "tsconfig.react.json",
     "tsconfig.next.json",
     "tsconfig.node.json"
-	],
-	"peerDependencies": {
+  ],
+  "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {

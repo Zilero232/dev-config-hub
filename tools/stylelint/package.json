@@ -1,11 +1,11 @@
 {
-	"name": "@zilero/stylelint",
+  "name": "@zilero/stylelint",
   "icon": "💅",
   "displayName": "✨ Zilero Stylelint Config",
-	"description": "💅 Opinionated Stylelint configuration for consistent CSS/SCSS styling",
-	"license": "MIT",
-	"version": "1.0.0",
-	"keywords": [
+  "description": "💅 Opinionated Stylelint configuration for consistent CSS/SCSS styling",
+  "license": "MIT",
+  "version": "1.1.0",
+  "keywords": [
     "stylelint",
     "stylelint-config",
     "css",
@@ -16,7 +16,7 @@
     "linter",
     "styleguide",
     "css-modules"
-	],
+  ],
   "scripts": {
     "lint:style": "stylelint \"**/*.{css,scss,sass}\"",
     "lint:style:fix": "stylelint \"**/*.{css,scss,sass}\" --fix",
@@ -27,36 +27,36 @@
     "node": ">=18.0.0",
     "npm": ">=8.0.0"
   },
-	"author": {
-		"name": "Artemev Alexandr",
-		"url": "https://github.com/Zilero232",
+  "author": {
+    "name": "Artemev Alexandr",
+    "url": "https://github.com/Zilero232",
     "email": "sasha.artemev.1002@mail.ru"
-	},
-	"bugs": {
-		"url": "https://github.com/Zilero232/dev-config-hub/issues"
-	},
-	"homepage": "https://github.com/Zilero232/dev-config-hub",
-	"repository": {
-		"url": "https://github.com/Zilero232/dev-config-hub"
-	},
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": [
-		".stylelintrc.js",
+  },
+  "bugs": {
+    "url": "https://github.com/Zilero232/dev-config-hub/issues"
+  },
+  "homepage": "https://github.com/Zilero232/dev-config-hub",
+  "repository": {
+    "url": "https://github.com/Zilero232/dev-config-hub"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    ".stylelintrc.js",
     "index.js"
-	],
-	"main": "index.js",
+  ],
+  "main": "index.js",
   "categories": [
     "Linters"
   ],
-	"peerDependencies": {
-		"stylelint": "^16.6.1"
-	},
-	"dependencies": {
-		"stylelint": "^16.15.0",
-		"stylelint-config-idiomatic-order": "^10.0.0",
-		"stylelint-config-standard-scss": "^14.0.0",
-		"stylelint-order": "^6.0.4"
-	}
+  "peerDependencies": {
+    "stylelint": "^16.6.1"
+  },
+  "dependencies": {
+    "stylelint": "^16.15.0",
+    "stylelint-config-idiomatic-order": "^10.0.0",
+    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-order": "^6.0.4"
+  }
 }
