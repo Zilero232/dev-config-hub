@@ -24,16 +24,16 @@
 		"projects": ["tools/*"],
 		"projectsRelationship": "fixed",
 		"releaseTagPattern": "v{version}",
+		"git": {
+			"commit": true,
+			"stageChanges": true,
+			"tag": true
+		},
 		"changelog": {
 			"automaticFromRef": true,
 			"workspaceChangelog": {
 				"createRelease": "github",
 				"file": "CHANGELOG.md"
-			},
-			"git": {
-				"commit": true,
-				"stageChanges": true,
-				"tag": true
 			}
 		},
 		"version": {
@@ -43,11 +43,6 @@
 				"fallbackCurrentVersionResolver": "disk",
 				"skipLockFileUpdate": true,
 				"versionSelection": "fixed"
-			},
-			"git": {
-				"commit": true,
-				"stageChanges": true,
-				"tag": true
 			}
 		}
 	}
