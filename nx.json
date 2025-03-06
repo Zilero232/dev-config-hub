@@ -38,7 +38,7 @@
 		},
 		"version": {
 			"generatorOptions": {
-				"packageRoot": "dist/{projectName}",
+				"packageRoot": "./tools/{projectName}",
 				"currentVersionResolver": "disk",
 				"fallbackCurrentVersionResolver": "disk",
 				"skipLockFileUpdate": true,

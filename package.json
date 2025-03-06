@@ -38,7 +38,9 @@
     "v:adduser": "adduser --registry http://localhost:4873/",
     "v:set-password": "profile set password --registry http://localhost:4873/",
     "v:publish:all": "nx run-many --target=publish --projects=tag:tool --parallel",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "nx release",
+    "release:dry": "nx release --dry-run"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
