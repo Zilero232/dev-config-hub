@@ -21,13 +21,19 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GITHUB_TOKEN }}
 
+      # Setup PNPM
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
       # Setup Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 'lts/*'
           registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'  # Enable built-in Node cache
+          cache: 'pnpm'
 
       # Install and cache pnpm
       - name: Setup PNPM
