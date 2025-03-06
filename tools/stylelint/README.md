@@ -6,70 +6,63 @@
   <a href="https://github.com/Zilero232/dev-config-hub">
       <img src="https://img.shields.io/github/actions/workflow/status/Zilero232/dev-config-hub/integrate.yml?label=CI&logo=GitHub" alt="CI status">
     </a>
-  <a href="https://www.npmjs.com/package/@zilero/tsconfigs">
-      <img src="https://img.shields.io/npm/dm/@zilero/tsconfigs?logo=NPM" alt="npm downloads">
+  <a href="https://www.npmjs.com/package/@zilero/stylelint">
+      <img src="https://img.shields.io/npm/dm/@zilero/stylelint?logo=NPM" alt="npm downloads">
     </a>
   <a href="https://github.com/Zilero232/cli">
       <img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="npm license">
     </a>
   <a href="https://github.com/Zilero232/dev-config-hub/tree/main/tools/stylelint">
-      <img src="https://img.shields.io/npm/v/@zilero/tsconfigs?label=version" alt="version">
+      <img src="https://img.shields.io/npm/v/@zilero/stylelint?label=version" alt="version">
     </a>
 </p>
 
-> ✨ Opinionated TypeScript configurations for modern development
+> ✨ Opinionated Stylelint configurations for modern development
 
 ## ✨ Features
 
 - 📦 Zero-config setup
-- 🎯 Strict type checking enabled
-- 🔧 Modern ECMAScript features
-- 🚀 Optimized for React/Next.js
-- 💪 Path aliases support
-- 📱 Module resolution strategies
-- 🎭 Different environment presets
+- 🎨 Consistent CSS/SCSS formatting
+- ⚡️ Modern CSS features support
+- 🚫 Common CSS errors prevention
+- 📱 Responsive design best practices
+- 🎭 Support for CSS-in-JS
+- ✅ CSS Grid and Flexbox validation
 
 ## 📥 Installation
 
 ### Using npm
 
 ```bash
-npm install --save-dev @zilero/tsconfigs
+npm install --save-dev @zilero/stylelint
 ```
 ### Using yarn
 
 ```bash
-yarn add -D @zilero/tsconfigs
+yarn add -D @zilero/stylelint
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm install -D @zilero/tsconfigs
+pnpm install -D @zilero/stylelint
 ```
 
 ## 🚀 Quick start
 
-Create the `tsconfig.json` at the root of your project:
+Create the `.stylelintrc.js` at the root of your project:
 
-```json
+```js
 {
-  "extends": "./node_modules/@zilero/tsconfigs/tsconfig.base.json",
-	"compilerOptions": {
+  module.exports = {
+    extends: ['@zilero/stylelint']
   }
 }
 ```
 
-## 📚 Available Configurations
-
-- `tsconfig.base.json`  - Base configuration for TypeScript projects
-- `tsconfig.react.json` - Configuration for React applications
-- `tsconfig.next.json`  - Configuration for Next.js projects
-- `tsconfig.node.json`  - Configuration for Node.js applications
-
 ## 🤝 Contributing
 
-We'd love for you to contribute to `@zilero/tsconfigs`! Whether it's reporting bugs, suggesting features, or submitting pull requests, your help is always appreciated.
+We'd love for you to contribute to `@zilero/stylelint`! Whether it's reporting bugs, suggesting features, or submitting pull requests, your help is always appreciated.
 
 ### How to contribute:
 
@@ -108,4 +101,4 @@ These folks keep the project moving and are resources for help.
 
 ## 📄 License
 
-License `@zilero/tsconfigs` is licensed under the [MIT License](LICENSE).
+License `@zilero/stylelint` is licensed under the [MIT License](LICENSE).

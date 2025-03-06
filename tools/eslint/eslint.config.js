@@ -2,6 +2,7 @@ import antfu from '@antfu/eslint-config';
 import pluginNext from '@next/eslint-plugin-next';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginReact from 'eslint-plugin-react';
+
 import { transformRules } from './utils/transformRules';
 
 /** @type {import('@zilero/eslint').Eslint} */

@@ -60,7 +60,7 @@
 		"jsdom": "^24.1.0"
 	},
 	"dependencies": {
-		"vitest": "^1.6.0",
-		"jsdom": "^24.1.0"
+		"vitest": "^3.0.7",
+		"jsdom": "^26.0.0"
 	}
 }

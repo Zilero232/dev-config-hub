@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/Zilero232/dev-config-hub",
   "repository": {
-    "url": "git+https://github.com/Zilero232/dev-config-hub.git"
+    "url": "https://github.com/Zilero232/dev-config-hub"
   },
   "workspaces": [
     "tools/*"
@@ -38,22 +38,20 @@
     "v:adduser": "adduser --registry http://localhost:4873/",
     "v:set-password": "profile set password --registry http://localhost:4873/",
     "v:publish:all": "nx run-many --target=publish --projects=tag:tool --parallel",
-    "release": "node scripts/release.js",
-    "release:dry": "node scripts/release.js --dryRun --verbose",
-    "commit": "git cz"
+    "commit": "git-cz"
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@nrwl/nx-cloud": "^19.1.0",
-    "@nx/devkit": "^20.3.1",
-    "@nx/js": "^20.3.1",
-    "@types/node": "^22.10.5",
-    "commit-jazzer": "^1.1.1",
+    "@nx/devkit": "^20.4.6",
+    "@nx/js": "^20.4.6",
+    "@types/node": "^22.13.9",
+    "commit-jazzer": "^1.1.5",
     "dotenv": "^16.4.7",
     "glob": "^11.0.1",
     "husky": "^9.1.7",
-    "nx": "20.3.1",
-    "verdaccio": "^5.0.4",
+    "nx": "20.4.6",
+    "verdaccio": "5.0.4",
     "yargs": "^17.7.2"
   },
   "config": {

@@ -1,0 +1,71 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required for creating releases and tags
+      id-token: write  # Required for npm publishing
+      packages: write  # Required for npm publishing
+
+    steps:
+      # Checkout repository with full git history for changelog generation
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'  # Enable built-in Node cache
+
+      # Install and cache pnpm
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2
+        with:
+          version: latest
+
+      # Cache node_modules to speed up builds
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            ~/.pnpm-store
+            .nx/cache
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # Install dependencies only if cache miss
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Check if there are any changes that require a release
+      - name: Check for changes
+        id: changes
+        run: |
+          CHANGES=$(pnpm nx affected --target=build --base=origin/main~1)
+          if [ -n "$CHANGES" ]; then
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          fi
+
+      # Perform release only if there are changes
+      - name: Version and Release
+        if: steps.changes.outputs.has_changes == 'true'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.DEV_CONFIG_HUB_NPM_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.DEV_CONFIG_HUB_GITHUB_TOKEN }}
+        run: pnpm nx release tools/*

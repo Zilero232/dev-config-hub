@@ -34,19 +34,38 @@
 ### Using npm
 
 ```bash
-npm install --save-dev @zilero/tsconfig
+npm install --save-dev @zilero/tsconfigs
 ```
 ### Using yarn
 
 ```bash
-yarn add -D @zilero/tsconfig
+yarn add -D @zilero/tsconfigs
 ```
 
 ### Using pnpm
 
 ```bash
-pnpm install -D @zilero/tsconfig
+pnpm install -D @zilero/tsconfigs
 ```
+
+## 🚀 Quick start
+
+Create the `tsconfig.json` at the root of your project:
+
+```json
+{
+  "extends": "./node_modules/@zilero/tsconfigs/tsconfig.base.json",
+	"compilerOptions": {
+  }
+}
+```
+
+## 📚 Available Configurations
+
+- `tsconfig.base.json`  - Base configuration for TypeScript projects
+- `tsconfig.react.json` - Configuration for React applications
+- `tsconfig.next.json`  - Configuration for Next.js projects
+- `tsconfig.node.json`  - Configuration for Node.js applications
 
 ## ⚙️ Configuration Details
 
@@ -54,7 +73,7 @@ pnpm install -D @zilero/tsconfig
 
 ```json
 {
-  "extends": "@zilero/tsconfig/tsconfig.base.json",
+  "extends": "./node_modules/@zilero/tsconfigs/tsconfig.base.json",
 }
 ```
 
@@ -62,7 +81,7 @@ pnpm install -D @zilero/tsconfig
 
 ```json
 {
-  "extends": "@zilero/tsconfig/tsconfig.react.json",
+  "extends": "./node_modules/@zilero/tsconfigs/tsconfig.react.json",
 }
 ```
 
@@ -70,7 +89,7 @@ pnpm install -D @zilero/tsconfig
 
 ```json
 {
-  "extends": "@zilero/tsconfig/tsconfig.next.json",
+  "extends": "./node_modules/@zilero/tsconfigs/tsconfig.next.json",
 }
 ```
 
@@ -78,24 +97,13 @@ pnpm install -D @zilero/tsconfig
 
 ```json
 {
-  "extends": "@zilero/tsconfig/tsconfig.node.json",
-}
-```
-
-Add scripts to your `package.json`:
-
-```json
-"scripts": {
-  "test": "vitest",
-  "test:ui": "vitest --ui",
-  "test:coverage": "vitest run --coverage",
-  "test:ci": "vitest run --coverage --reporter=json --reporter=junit"
+  "extends": "./node_modules/@zilero/tsconfigs/tsconfig.node.json",
 }
 ```
 
 ## 🤝 Contributing
 
-We'd love for you to contribute to `@zilero/tsconfig`! Whether it's reporting bugs, suggesting features, or submitting pull requests, your help is always appreciated.
+We'd love for you to contribute to `@zilero/tsconfigs`! Whether it's reporting bugs, suggesting features, or submitting pull requests, your help is always appreciated.
 
 ### How to contribute:
 
@@ -134,4 +142,4 @@ These folks keep the project moving and are resources for help.
 
 ## 📄 License
 
-License `@zilero/tsconfig` is licensed under the [MIT License](LICENSE).
+License `@zilero/tsconfigs` is licensed under the [MIT License](LICENSE).

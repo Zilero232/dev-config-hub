@@ -1,41 +1,35 @@
 {
 	"compilerOptions": {
-		// Basic compiler options
-		"target": "esnext", // Specifies the ECMAScript version to use for the compiler.
-		"lib": ["dom", "dom.iterable", "esnext"], // Includes type definitions for DOM, DOM iterables, and the latest ECMAScript.
-		"allowJs": true, // Allows JavaScript files to be compiled alongside TypeScript.
-		"skipLibCheck": true, // Skips type checking for library files.
-		"esModuleInterop": true, // Enables compatibility support for ES modules.
-		"allowSyntheticDefaultImports": true, // Allows synthetic default imports if a library exports them.
+		// Basic Options
+		"target": "es2022", // Specify ECMAScript target version
+		"module": "NodeNext", // Use Node.js module resolution
+		"moduleResolution": "NodeNext", // Modern Node.js module resolution
+		"lib": ["es2023"], // Include latest ECMAScript features
 
-		// Strict Type-Checking Options
-		"strict": true, // Enables all strict type-checking options.
-		"noImplicitAny": true, // Raises an error on expressions and declarations with an implied 'any' type.
-		"noImplicitThis": true, // Raises an error when 'this' expressions are of type 'any'.
-		"strictNullChecks": true, // Ensures strict null checking mode.
-		"strictFunctionTypes": true, // Ensures function parameter bivariance is checked strictly.
-		"strictPropertyInitialization": true, // Ensures class properties are initialized in the constructor.
-		"noImplicitReturns": true, // Raises an error for functions that do not return a value in all code paths.
-		"noImplicitOverride": true, // Ensures that 'override' is used when a method in a subclass overrides a method in a superclass.
-		"noPropertyAccessFromIndexSignature": true, // Prevents access to properties on objects with index signatures using dot notation.
-		"useUnknownInCatchVariables": true, // Ensures that catch clause variables are of type 'unknown' instead of 'any'.
-		"exactOptionalPropertyTypes": true, // Ensures that optional properties are only assignable to undefined or their type.
+		// Strict Type-Checking
+		"strict": true, // Enable all strict type checking options
+		"esModuleInterop": true, // Enable CommonJS/ES module interoperability
+		"skipLibCheck": true, // Skip type checking of declaration files
+		"forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
 
-		// Module Resolution and Compilation Settings
-		"module": "esnext", // Specifies the module format to use in the project.
-		"moduleResolution": "node", // Determines module resolution strategy similar to Node.js.
-		"isolatedModules": true, // Ensures each file is compiled in isolation for better compatibility with build tools.
-		"resolveJsonModule": true, // Allows importing JSON files as modules.
-		"noEmit": true, // Disables emitting compiled files.
-		"jsx": "react", // Sets JSX support to use React.
+		// Additional Checks
+		"noUnusedLocals": true, // Report errors on unused locals
+		"noUnusedParameters": true, // Report errors on unused parameters
+		"noImplicitReturns": true, // Report error when not all code paths return
+		"noFallthroughCasesInSwitch": true, // Report errors for fallthrough cases in switch
 
-		// Additional Settings
-		"sourceMap": true, // Generates source map files for debugging.
-		"noUnusedLocals": true, // Raises an error if there are unused local variables.
-		"noUnusedParameters": true, // Raises an error if there are unused function parameters.
-		"noFallthroughCasesInSwitch": true, // Raises an error if a switch case falls through without a break or return.
-		"forceConsistentCasingInFileNames": true, // Enforces consistent casing in file names.
-		"downlevelIteration": true, // Enables full ES6 iteration support in ES5.
-		"skipDefaultLibCheck": true // Skips type checking for default library files (like lib.d.ts).
+		// Module Resolution
+		"resolveJsonModule": true, // Enable importing .json files
+		"allowJs": true, // Allow JavaScript files to be compiled
+		"sourceMap": true, // Generate source maps for debugging
+
+		// Output Options
+		"outDir": "./dist", // Redirect output to the dist directory
+		"removeComments": true, // Remove comments in output
+
+		// Advanced Options
+		"allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+		"experimentalDecorators": true, // Enable experimental support for decorators
+		"emitDecoratorMetadata": true // Emit decorator metadata
 	}
 }

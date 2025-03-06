@@ -65,8 +65,8 @@ Add scripts to your `package.json`:
 
 ```json
 "scripts": {
-  "lint:check": "eslint",
-  "lint:fix": "eslint --fix",
+  "lint:check": "eslint ./",
+  "lint:fix": "eslint ./ --fix",
 }
 ```
 

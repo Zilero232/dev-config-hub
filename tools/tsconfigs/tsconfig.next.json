@@ -1,41 +1,32 @@
 {
 	"compilerOptions": {
-		// Basic compiler options
-		"target": "esnext", // Specifies the ECMAScript version to use for the compiler.
-		"lib": ["dom", "dom.iterable", "esnext"], // Includes type definitions for DOM, DOM iterables, and the latest ECMAScript.
-		"allowJs": true, // Allows JavaScript files to be compiled alongside TypeScript.
-		"skipLibCheck": true, // Skips type checking for library files.
-		"esModuleInterop": true, // Enables compatibility support for ES modules.
-		"allowSyntheticDefaultImports": true, // Allows synthetic default imports if a library exports them.
+		// Basic Options
+		"target": "es5", // Specify ECMAScript target version
+		"lib": ["dom", "dom.iterable", "esnext"], // List of library files to include
+		"allowJs": true, // Allow JavaScript files to be compiled
+		"skipLibCheck": true, // Skip type checking of declaration files
+		"strict": true, // Enable all strict type-checking options
+		"forceConsistentCasingInFileNames": true, // Ensure consistent casing in file names
 
-		// Strict Type-Checking Options
-		"strict": true, // Enables all strict type-checking options.
-		"noImplicitAny": true, // Raises an error on expressions and declarations with an implied 'any' type.
-		"noImplicitThis": true, // Raises an error when 'this' expressions are of type 'any'.
-		"strictNullChecks": true, // Ensures strict null checking mode.
-		"strictFunctionTypes": true, // Ensures function parameter bivariance is checked strictly.
-		"strictPropertyInitialization": true, // Ensures class properties are initialized in the constructor.
-		"noImplicitReturns": true, // Raises an error for functions that do not return a value in all code paths.
-		"noImplicitOverride": true, // Ensures that 'override' is used when a method in a subclass overrides a method in a superclass.
-		"noPropertyAccessFromIndexSignature": true, // Prevents access to properties on objects with index signatures using dot notation.
-		"useUnknownInCatchVariables": true, // Ensures that catch clause variables are of type 'unknown' instead of 'any'.
-		"exactOptionalPropertyTypes": true, // Ensures that optional properties are only assignable to undefined or their type.
+		// Module Settings
+		"noEmit": true, // Do not emit outputs
+		"esModuleInterop": true, // Enable interoperability between CommonJS and ES Modules
+		"module": "esnext", // Specify module code generation
+		"moduleResolution": "node", // Resolve modules using Node.js style
+		"resolveJsonModule": true, // Include modules imported with .json extension
+		"isolatedModules": true, // Ensure each file can be safely transpiled
 
-		// Module Resolution and Compilation Settings
-		"module": "esnext", // Specifies the module format to use in the project.
-		"moduleResolution": "node", // Determines module resolution strategy similar to Node.js.
-		"isolatedModules": true, // Ensures each file is compiled in isolation for better compatibility with build tools.
-		"resolveJsonModule": true, // Allows importing JSON files as modules.
-		"noEmit": true, // Disables emitting compiled files.
-		"jsx": "react", // Sets JSX support to use React.
+		// JSX Settings
+		"jsx": "preserve", // Preserve JSX for Next.js
 
-		// Additional Settings
-		"sourceMap": true, // Generates source map files for debugging.
-		"noUnusedLocals": true, // Raises an error if there are unused local variables.
-		"noUnusedParameters": true, // Raises an error if there are unused function parameters.
-		"noFallthroughCasesInSwitch": true, // Raises an error if a switch case falls through without a break or return.
-		"forceConsistentCasingInFileNames": true, // Enforces consistent casing in file names.
-		"downlevelIteration": true, // Enables full ES6 iteration support in ES5.
-		"skipDefaultLibCheck": true // Skips type checking for default library files (like lib.d.ts).
+		// Incremental Compilation
+		"incremental": true, // Enable incremental compilation
+
+		// Next.js Plugin
+		"plugins": [
+			{
+				"name": "next"
+			}
+		]
 	}
 }

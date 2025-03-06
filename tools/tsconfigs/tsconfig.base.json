@@ -1,5 +1,4 @@
 {
-	"extends": "@zilero/tsconfigs/base",
 	"compilerOptions": {
 		// Basic compiler options
 		"target": "esnext", // Specifies the ECMAScript version to use for the compiler.

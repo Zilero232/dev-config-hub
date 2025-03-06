@@ -31,9 +31,9 @@
 				"file": "CHANGELOG.md"
 			},
 			"git": {
-				"commit": false,
-				"stageChanges": false,
-				"tag": false
+				"commit": true,
+				"stageChanges": true,
+				"tag": true
 			}
 		},
 		"version": {
@@ -42,13 +42,12 @@
 				"currentVersionResolver": "disk",
 				"fallbackCurrentVersionResolver": "disk",
 				"skipLockFileUpdate": true,
-				"versionSelection": "independent",
-				"firstRelease": true
+				"versionSelection": "fixed"
 			},
 			"git": {
-				"commit": false,
-				"stageChanges": false,
-				"tag": false
+				"commit": true,
+				"stageChanges": true,
+				"tag": true
 			}
 		}
 	}

@@ -1,2 +1,4 @@
 packages:
-  - 'tools/*'
+  - tools/*
+onlyBuiltDependencies:
+  - es5-ext
