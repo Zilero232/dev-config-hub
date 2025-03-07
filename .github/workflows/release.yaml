@@ -56,15 +56,13 @@ jobs:
       - name: Run Biome
         run: pnpm biome:check-staged
 
-      # Step to create a GitHub release.
-      - name: Version and Release
-        run: npx nx release --push
-        env:
-          GITHUB_TOKEN: ${{ secrets.DEV_CONFIG_HUB_GITHUB_TOKEN }}
+      # Step to print environment info.
+      - name: Print Environment Info
+        run: pnpm nx report
 
       # Step to publish packages.
       - name: Publish packages
-        run: npx nx release publish
+        run: pnpm nx release publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.DEV_CONFIG_HUB_NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
