@@ -1,0 +1,70 @@
+name: Release
+
+on:
+  # Trigger the workflow on push to the `main` branch.
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    name: Publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+
+    timeout-minutes: 10
+
+    steps:
+      # Step to check out the repository code.
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Step to install pnpm.
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9
+
+      # Step to cache the `node_modules` directory to improve performance of subsequent runs.
+      - name: Cache Node modules
+        id: pnpm-cache
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-pnpm-${{ matrix.node-version }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      # Step to set up Node.js with the version from the matrix.
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org/
+          cache: "pnpm"
+
+       # Step to install dependencies using PNPM.
+      - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm install --no-frozen-lockfile
+
+      # Step to run Biome.
+      - name: Run Biome
+        run: pnpm biome:check-staged
+
+      # Step to create a GitHub release.
+      - name: Version and Release
+        run: npx nx release --push
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEV_CONFIG_HUB_GITHUB_TOKEN }}
+
+      # Step to publish packages.
+      - name: Publish packages
+        run: npx nx release publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.DEV_CONFIG_HUB_NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true

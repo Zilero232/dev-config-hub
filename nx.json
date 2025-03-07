@@ -37,13 +37,7 @@
 			}
 		},
 		"version": {
-			"generatorOptions": {
-				"packageRoot": "./tools/{projectName}",
-				"currentVersionResolver": "disk",
-				"fallbackCurrentVersionResolver": "disk",
-				"skipLockFileUpdate": true,
-				"versionSelection": "fixed"
-			}
+      "conventionalCommits": true
 		}
 	}
 }
