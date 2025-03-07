@@ -4,7 +4,7 @@
   "displayName": "✨ Zilero Biome Config",
   "description": "🌿 Modern formatter, linter, and more for JavaScript, TypeScript, JSX, and JSON",
   "license": "MIT",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "scripts": {
     "biome:version": "biome version",
     "biome:check": "biome check --no-errors-on-unmatched",
