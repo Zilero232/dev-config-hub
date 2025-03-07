@@ -1,3 +1,13 @@
+## 1.2.3 (2025-03-07)
+
+### 🩹 Fixes
+
+- 🐛 - Fixed import for vitest ([471d55b](https://github.com/Zilero232/dev-config-hub/commit/471d55b))
+
+### ❤️ Thank You
+
+- Alexandr
+
 ## 1.2.2 (2025-03-07)
 
 This was a version bump only, there were no code changes.

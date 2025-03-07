@@ -4,7 +4,7 @@
   "displayName": "✨ Zilero Stylelint Config",
   "description": "💅 Opinionated Stylelint configuration for consistent CSS/SCSS styling",
   "license": "MIT",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "keywords": [
     "stylelint",
     "stylelint-config",
