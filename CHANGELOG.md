@@ -1,3 +1,14 @@
+## 1.2.10 (2025-03-08)
+
+### 🩹 Fixes
+
+- 🐛 - Added release action ([6577d54](https://github.com/Zilero232/dev-config-hub/commit/6577d54))
+- 🐛 - Fixed import util for eslint ([4daf721](https://github.com/Zilero232/dev-config-hub/commit/4daf721))
+
+### ❤️ Thank You
+
+- Alexandr
+
 ## 1.2.9 (2025-03-07)
 
 This was a version bump only, there were no code changes.
