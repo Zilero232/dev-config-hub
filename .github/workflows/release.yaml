@@ -62,7 +62,7 @@ jobs:
 
       # Step to publish packages.
       - name: Publish packages
-        run: pnpm nx release publish
+        run: pnpm nx release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.DEV_CONFIG_HUB_NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
