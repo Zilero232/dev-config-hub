@@ -3,7 +3,7 @@ import pluginNext from '@next/eslint-plugin-next';
 import pluginJsxA11y from 'eslint-plugin-jsx-a11y';
 import pluginReact from 'eslint-plugin-react';
 
-import { transformRules } from './utils/transformRules';
+import { transformRules } from './utils/transformRules.js';
 
 /** @type {import('@zilero/eslint').Eslint} */
 export const eslint = ({ jsxA11y = false, next = false, sort = false, ...options }, ...configs) => {
